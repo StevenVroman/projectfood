@@ -1,0 +1,13 @@
+div#error {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 20%;
+}
+div#error h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=screen.css.map */
