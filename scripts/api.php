@@ -2,6 +2,7 @@
 function CallAPI($method, $url, $data = false)
 {
     $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     switch ($method) {
         case "POST":
             // voor het maken van een object gebruiken we POST, hiermee laten we dit ook aan cURL weten
@@ -69,4 +70,4 @@ function CallAPI($method, $url, $data = false)
     } else {
         return $result;
     }
- }
+}
