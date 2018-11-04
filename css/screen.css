@@ -10,4 +10,19 @@ div#error h1 {
   text-transform: uppercase;
 }
 
+div#login {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+div#login div#login-form-2 {
+  padding: 9%;
+  background: #f05837;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+div#login div#login-form-2 h3 {
+  text-align: center;
+  margin-bottom: 12%;
+  color: #fff;
+}
+
 /*# sourceMappingURL=screen.css.map */
