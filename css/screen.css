@@ -1,11 +1,13 @@
-div#error {
+body#error {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   margin: auto;
   text-align: center;
   padding-top: 20%;
+  background-color: #f1f0de;
+  color: #f48357;
 }
-div#error h1 {
+body#error h1 {
   font-size: 4rem;
   text-transform: uppercase;
 }
@@ -53,8 +55,7 @@ div#login .login-form-2 .btnregis {
   color: #f1f0de;
   margin-top: 20px;
 }
-div#login .login-form-2 .btnSubmit:focus,
-div#login .login-form-2 .btnregis:focus {
+div#login .login-form-2 .btnSubmit:active {
   box-shadow: none;
 }
 div#login .login-form-2 .btnForgetPwd {

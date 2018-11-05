@@ -1,3 +1,12 @@
+<?php
+ include_once 'scripts/config.php';?>
+<?php include_once 'scripts/api.php';
+$users = CallAPI("GET", $DB2."/tblusers");
+print_r($users);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,26 +24,27 @@
 <div id="login">
     <div class="container">
         <div class="col-12 login-form-2">
-                        <img src="pics/logo.png" alt="logo" id="logo">
+            <img src="pics/logo.png" alt="logo" id="logo">
+                    <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" value="" />
+                            <input type="text" class="form-control" placeholder="Username" value="" required/>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" value="" />
+                            <input type="password" class="form-control" placeholder="Password" value="" required />
                         </div>
                         <div class="container form-group">
                         <div class="row">
                             <div class="col-6">
-                                <input type="submit" class="btnSubmit" value="Login" />
+                                <input type="submit" class="btnSubmit form-control" value="Login" />
                             </div>
                              <div class="col-6">
-                                <input type="submit" class="btnregis" value="Registreer" />
+                                <input type="submit" class="btnregis form-control" value="Registreer" />
                              </div>
                             <div class="col-12">
                                 <a href="#" class="btnForgetPwd" value="Login">Forgot Password?</a>
                             </div>
                         </div>
-
+                    </form>
         </div>
     </div>
 </div>

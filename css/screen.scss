@@ -3,12 +3,14 @@ $textcolor:#f48357;
 $buttoncolor:#e4681e;
 $lichtgeel: #fad37a;
 
-div#error {
+body#error {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 20%;
+    background-color: $bgcolor;
+    color: $textcolor;
 
     h1 {
         font-size: 4rem;
@@ -68,10 +70,10 @@ div#login {
             text-transform: uppercase;
             color: $bgcolor;
             margin-top: 20px;
+
         }
 
-        .btnSubmit:focus,
-        .btnregis:focus {
+        .btnSubmit:active {
             box-shadow: none;
         }
 
