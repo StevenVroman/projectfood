@@ -1,4 +1,4 @@
-body#error {
+div#error {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   margin: auto;
@@ -7,7 +7,7 @@ body#error {
   background-color: #f1f0de;
   color: #f48357;
 }
-body#error h1 {
+div#error h1 {
   font-size: 4rem;
   text-transform: uppercase;
 }
@@ -23,6 +23,10 @@ div#login {
 }
 div#login img {
   width: 250px;
+}
+div#login h3 {
+  font-size: 11px;
+  padding-bottom: 20px;
 }
 div#login .container {
   font-family: "Montserrat", sans-serif;

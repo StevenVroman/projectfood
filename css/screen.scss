@@ -3,7 +3,7 @@ $textcolor:#f48357;
 $buttoncolor:#e4681e;
 $lichtgeel: #fad37a;
 
-body#error {
+div#error {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     margin: auto;
@@ -32,6 +32,11 @@ div#login {
 
     img {
         width: 250px;
+    }
+
+    h3 {
+        font-size: 11px;
+        padding-bottom: 20px;
     }
 
     .container {
