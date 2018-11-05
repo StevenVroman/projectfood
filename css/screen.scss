@@ -19,12 +19,18 @@ div#error {
 
 body#loginpage {
     background-color: $bgcolor;
+
+
 }
 
 div#login {
     width: 400px;
     text-align: center;
     margin: auto;
+
+    img {
+        width: 250px;
+    }
 
     .container {
         font-family: 'Montserrat',
@@ -33,16 +39,10 @@ div#login {
         background-color: $bgcolor;
     }
 
+
+
     .login-form-2 {
         color: $textcolor;
-
-        h3 {
-            text-align: center;
-            margin-top: 40%;
-            padding-bottom: 30px;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
 
         .form-control {
             font-size: 12px;
@@ -68,6 +68,11 @@ div#login {
             text-transform: uppercase;
             color: $bgcolor;
             margin-top: 20px;
+        }
+
+        .btnSubmit:focus,
+        .btnregis:focus {
+            box-shadow: none;
         }
 
         .btnForgetPwd {

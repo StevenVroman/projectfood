@@ -19,6 +19,9 @@ div#login {
   text-align: center;
   margin: auto;
 }
+div#login img {
+  width: 250px;
+}
 div#login .container {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -26,13 +29,6 @@ div#login .container {
 }
 div#login .login-form-2 {
   color: #f48357;
-}
-div#login .login-form-2 h3 {
-  text-align: center;
-  margin-top: 40%;
-  padding-bottom: 30px;
-  font-weight: 800;
-  letter-spacing: -1px;
 }
 div#login .login-form-2 .form-control {
   font-size: 12px;
@@ -56,6 +52,10 @@ div#login .login-form-2 .btnregis {
   text-transform: uppercase;
   color: #f1f0de;
   margin-top: 20px;
+}
+div#login .login-form-2 .btnSubmit:focus,
+div#login .login-form-2 .btnregis:focus {
+  box-shadow: none;
 }
 div#login .login-form-2 .btnForgetPwd {
   text-decoration: none;

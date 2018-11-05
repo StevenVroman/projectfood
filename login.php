@@ -15,7 +15,7 @@
 <div id="login">
     <div class="container">
         <div class="col-12 login-form-2">
-                    <h3>Login</h3>
+                        <img src="pics/logo.png" alt="logo" id="logo">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Username" value="" />
                         </div>
