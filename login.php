@@ -4,7 +4,11 @@
 $users = CallAPI("GET", $DB2."/tblusers");
 $wrongpass = false;
 $forgotpass= false;
+$cookie_name = "hungryuser";
 
+if(isset($_COOKIE[$cookie_name])) {
+    header("location: index.php");
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['submit'])) {
         //login button
@@ -16,7 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if($filledinlogin==$user["Username"] && $filledinpass==$user["Pass"])
             {
                 //login is ok // heeft nog geen cookie //aanmaken en doorsturen
-                print("check");
+                $cookie_value = $filledinlogin;
+                setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+                header("location: index.php");
             }
             else{
 
@@ -27,9 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
     } 
-    if($_GET['forgot'] == 'true'){
-        $forgotpass = true;
-    }
     
 }
 
@@ -69,10 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <input type="submit" class="btnSubmit form-control" value="Login" name="submit"/>
                             </div>
                              <div class="col-6">
-                                <input type="submit" class="btnregis form-control" value="Registreer" name="Registreer" onclick="window.location.href='test.php'" />
+                                <input type="submit" class="btnregis form-control" value="Registreer" name="Registreer" onclick="window.location.href='register.php'" />
                              </div>
                             <div class="col-12">
-                                <a href="login.php?forgot=true" class="btnForgetPwd">Forgot Password?</a>
+                                <a href="" class="btnForgetPwd " onclick="return confirm('testuser / test123')">Forgot Password?</a>
                             </div>
                         </div>
                         </div>
@@ -94,6 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    if ($forgotpass==true){
        var forgotpass = "<?php echo $forgotpass;?>";
         alert("test account : User = testuser pass = test123");
+        $forgotpass=false;
    }
    
 </script>
