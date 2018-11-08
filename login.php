@@ -4,7 +4,7 @@
 $users = CallAPI("GET", $DB2."/tblusers");
 $wrongpass = false;
 $forgotpass= false;
-$cookie_name = "hungryuser";
+$cookie_name = "hungry";
 
 if(isset($_COOKIE[$cookie_name])) {
     header("location: home.php");

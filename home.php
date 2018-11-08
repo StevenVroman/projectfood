@@ -1,5 +1,5 @@
 <?php
-$cookie_name = "hungryuser";
+$cookie_name = "hungry";
 
 if(isset($_COOKIE[$cookie_name])) {
     header("location: login.php");

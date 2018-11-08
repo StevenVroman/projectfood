@@ -12,11 +12,11 @@ div#error h1 {
   text-transform: uppercase;
 }
 
-body#loginpage {
-  background-color: none;
+body#loginpage,
+body#registerpage {
+  background-color: #f1f0de;
   background-image: url("/pics/bgimages.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
 }
 
 .fill {
@@ -25,42 +25,55 @@ body#loginpage {
   padding-top: 100px;
 }
 
-div#login {
+div#login,
+div#register {
   width: 400px;
   text-align: center;
   margin: auto;
 }
-div#login img {
+div#login img,
+div#register img {
   width: 250px;
 }
-div#login h3 {
+div#login h3,
+div#register h3 {
   font-size: 11px;
   padding-bottom: 20px;
 }
-div#login .container {
+div#login .container,
+div#register .container {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-div#login .login-form-2 {
+div#login label,
+div#register label {
+  font-size: 14px;
+  text-transform: none;
+}
+div#login .login-form-2,
+div#register .login-form-2 {
   color: #f48357;
   background-color: #f1f0de;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   height: 100%;
   opacity: 0.9;
-  border: 3px solid #fad37a;
 }
-div#login .login-form-2 .form-control {
+div#login .login-form-2 .form-control,
+div#register .login-form-2 .form-control {
   font-size: 12px;
   border-radius: 1.5rem;
   background-color: #f1f0de;
   color: #e4681e;
   border: #e4681e 2px solid;
 }
-div#login .login-form-2 .form-control:focus {
+div#login .login-form-2 .form-control:focus,
+div#register .login-form-2 .form-control:focus {
   box-shadow: none;
 }
 div#login .login-form-2 .btnSubmit,
-div#login .login-form-2 .btnregis {
+div#login .login-form-2 .btnregis,
+div#register .login-form-2 .btnSubmit,
+div#register .login-form-2 .btnregis {
   font-weight: 700;
   font-size: 12px;
   height: 50px;
@@ -74,22 +87,27 @@ div#login .login-form-2 .btnregis {
   margin-bottom: 20px;
 }
 div#login .login-form-2 .btnSubmit:hover,
-div#login .login-form-2 .btnregis:hover {
+div#login .login-form-2 .btnregis:hover,
+div#register .login-form-2 .btnSubmit:hover,
+div#register .login-form-2 .btnregis:hover {
   background-color: #fad37a;
   border: #e2a30f 3px solid;
   color: #e2a30f;
 }
-div#login .login-form-2 .btnSubmit:active {
+div#login .login-form-2 .btnSubmit:active,
+div#register .login-form-2 .btnSubmit:active {
   box-shadow: none;
 }
-div#login .login-form-2 .btnForgetPwd {
+div#login .login-form-2 .btnForgetPwd,
+div#register .login-form-2 .btnForgetPwd {
   text-decoration: none;
   color: #f48357;
   margin-top: 20px;
   text-align: center;
   font-size: 11px;
 }
-div#login .login-form-2 .btnForgetPwd:hover {
+div#login .login-form-2 .btnForgetPwd:hover,
+div#register .login-form-2 .btnForgetPwd:hover {
   text-decoration: none;
   color: lightblue;
 }

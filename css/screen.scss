@@ -21,11 +21,11 @@ div#error {
 
 }
 
-body#loginpage {
-    background-color: none;
+body#loginpage,
+body#registerpage {
+    background-color: $bgcolor;
     background-image: url("/pics/bgimages.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
 }
 
 .fill {
@@ -35,7 +35,8 @@ body#loginpage {
 
 }
 
-div#login {
+div#login,
+div#register {
     width: 400px;
     text-align: center;
     margin: auto;
@@ -57,15 +58,17 @@ div#login {
 
     }
 
-
+    label {
+        font-size: 14px;
+        text-transform: none;
+    }
 
     .login-form-2 {
         color: $textcolor;
         background-color: $bgcolor;
-        border-radius: 0.5rem;
+        border-radius: 1rem;
         height: 100%;
         opacity: 0.9;
-        border: 3px solid $lichtgeel;
 
         .form-control {
             font-size: 12px;
