@@ -7,7 +7,7 @@ $forgotpass= false;
 $cookie_name = "hungryuser";
 
 if(isset($_COOKIE[$cookie_name])) {
-    header("location: index.php");
+    header("location: home.php");
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['submit'])) {
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 //login is ok // heeft nog geen cookie //aanmaken en doorsturen
                 $cookie_value = $filledinlogin;
                 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-                header("location: index.php");
+                header("location: home.php");
             }
             else{
 
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body id="loginpage">
 <div id="login">
-    <div class="container">
+    <div class="container fill">
         <div class="col-12 login-form-2">
                 <div id="logopic">
                 <img src="pics/logo.png" alt="logo"> 
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <input type="submit" class="btnSubmit form-control" value="Login" name="submit"/>
                             </div>
                              <div class="col-6">
-                                <input type="submit" class="btnregis form-control" value="Registreer" name="Registreer" onclick="window.location.href='register.php'" />
+                                <input type="submit" class="btnregis form-control" value="Register" name="Registreer" onclick="window.location.href='register.php'" />
                              </div>
                             <div class="col-12">
                                 <a href="" class="btnForgetPwd " onclick="return confirm('testuser / test123')">Forgot Password?</a>
