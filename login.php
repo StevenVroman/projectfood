@@ -3,6 +3,7 @@
 <?php include_once 'scripts/api.php';
 $users = CallAPI("GET", $DB2."/tblusers");
 $wrongpass = false;
+$forgotpass= false;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['submit'])) {
@@ -26,9 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
     } 
-    elseif(isset($_POST['forgot'])) {
-       //kader komt met voorbeeldaccount
-
+    if($_GET['forgot'] == 'true'){
+        $forgotpass = true;
     }
     
 }
@@ -69,10 +69,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <input type="submit" class="btnSubmit form-control" value="Login" name="submit"/>
                             </div>
                              <div class="col-6">
-                                <input type="submit" class="btnregis form-control" value="Registreer" name="Registreer" />
+                                <input type="submit" class="btnregis form-control" value="Registreer" name="Registreer" onclick="window.location.href='test.php'" />
                              </div>
                             <div class="col-12">
-                                <a href="#" class="btnForgetPwd">Forgot Password?</a>
+                                <a href="login.php?forgot=true" class="btnForgetPwd">Forgot Password?</a>
                             </div>
                         </div>
                         </div>
@@ -91,5 +91,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         para.appendChild(node);
        document.getElementById("logopic").insertBefore(para, null);
    }
+   if ($forgotpass==true){
+       var forgotpass = "<?php echo $forgotpass;?>";
+        alert("test account : User = testuser pass = test123");
+   }
+   
 </script>
 </html>
