@@ -2,6 +2,8 @@
 <?php include_once 'scripts/api.php'; 
 $areas = CallAPI("GET", $DB."/list.php?a=list");
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +24,7 @@ $areas = CallAPI("GET", $DB."/list.php?a=list");
     <div class="container fill">
         <div class="col-12 login-form-2">
                 <div id="logopic">
-                <img src="pics/logo.png" alt="logo"> 
+                <img src="pics/logowhite.png" alt="logo"> 
                 </div>
                     <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="registerform">
                         <div class="form-group">
@@ -38,15 +40,17 @@ $areas = CallAPI("GET", $DB."/list.php?a=list");
                             <input type="password" class="form-control" placeholder="Password" value="" name="pass2" id = "pass2"required />
                         </div>
                         <div class="form-group">
-                        <label for="pass">Choose Your type of food</label> <br />
-                        <select>
-                            <?php //print_r($categories);
-                        foreach ($areas as $area) {
-                            for( $i =0; i<=15;$i++){
-                               print("<option value=".$i.">".$area[$i]['strArea']."</option>"); 
-                            }
+                        <label for="keuzes">Choose Your type of food</label> <br />
+                        <select id="keuzes" class="form-control">
+                        <?php 
+                        
+                        for( $i =0; $i<=19;$i++){
+                            
+                           print("<option value=".$i.">".$areas['meals'][$i]['strArea']."</option>"); 
+                            
+                        }
 
-                        }?>
+                    ?>
                         </select>
                         
                         </div>

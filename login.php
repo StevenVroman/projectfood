@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container fill">
         <div class="col-12 login-form-2">
                 <div id="logopic">
-                <img src="pics/logo.png" alt="logo"> 
+                <img src="pics/logowhite.png" alt="logo"> 
                 </div>
                     <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="loginform">
                         <div class="form-group">
