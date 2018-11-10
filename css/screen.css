@@ -81,7 +81,7 @@ div#register .login-form-2 .btnregis {
   height: 50px;
   width: 100%;
   background-color: #490012;
-  border: 2px #DB4C40 solid;
+  border: 3px #490012 solid;
   border-radius: 1.5rem;
   text-transform: uppercase;
   color: #F3EFF5;
@@ -92,7 +92,7 @@ div#login .login-form-2 .btnSubmit:hover,
 div#login .login-form-2 .btnregis:hover,
 div#register .login-form-2 .btnSubmit:hover,
 div#register .login-form-2 .btnregis:hover {
-  border: #490012 3px solid;
+  border: #DB4C40 3px solid;
 }
 div#login .login-form-2 .btnSubmit:active,
 div#register .login-form-2 .btnSubmit:active {

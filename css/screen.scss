@@ -94,7 +94,7 @@ div#register {
             height: 50px;
             width: 100%;
             background-color: $pinky;
-            border: 2px $rood solid;
+            border: 3px $pinky solid;
             border-radius: 1.5rem;
             text-transform: uppercase;
             color: $textcolor;
@@ -106,7 +106,7 @@ div#register {
         .btnSubmit:hover,
         .btnregis:hover {
 
-            border: $pinky 3px solid;
+            border: $rood 3px solid;
         }
 
         .btnSubmit:active {
