@@ -1,8 +1,63 @@
 <?php include_once 'scripts/config.php';?>
 <?php include_once 'scripts/api.php'; 
 $areas = CallAPI("GET", $DB."/list.php?a=list");
+$userslist = CallAPI("GET", $DB2."/tblusers");
+$overeenkomstpass = false;
+$usertekort = false;
+$passtekort= false;
+$bestaatal=false;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $user = array();
+        $filledinlogin=$_POST['login'];
+        $filledinpass=$_POST['pass'];
+        $filledinpass2=$_POST['pass2'];
+        $keuzevalue = $_POST['keuzes'];
+        $user["username"]=$filledinlogin;
+        $user["Pass"]=$filledinpass;
+        $user["FavFood"]=$keuzevalue;
+    if (isset($_POST['Registreer'])) {
+        //check als 4 velden ingevuld zijn
+        if(strlen($filledinlogin)<=5){
+            $usertekort=true; // fout
+        }
+        else{
+            $usertekort=false;
+        }
+        if(strlen($filledinpass)<=5){
+            $passtekort = true; //fout
+        }
+        else{
+            $passtekort = false;
+        }
+        
+        if($filledinpass == $filledinpass2){   
+            $overeenkomstpass=false;
+           }
+        else{
+            $overeenkomstpass=true; //fout
+        }
 
+        if(isset($_POST['login']) && isset($_POST['pass'])&& isset($_POST['pass2'])&& isset($_POST['keuzes']))
+        {
+           if($usertekort == false && $overeenkomstpass==false && $passtekort==false){
+            //ga door
+            foreach($userslist as $userlist){
+                if($filledinlogin==$userlist["Username"] )
+                $bestaatal=true;
+                else{
+                $bestaatal=false;
+                }
+            }
+            if($bestaatal==false){
+                $users = CallAPI("POST", $DB2."/tblusers",json_encode($user)); // goed
+            }
+            
+            }
+        }   
 
+    } 
+    
+}
 
 ?>
 
@@ -24,7 +79,8 @@ $areas = CallAPI("GET", $DB."/list.php?a=list");
     <div class="container fill">
         <div class="col-12 login-form-2">
                 <div id="logopic">
-                <img src="pics/logowhite.png" alt="logo"> 
+                <img src="pics/logowhite.png" alt="logo">
+                <h3 id="fout"></h3>
                 </div>
                     <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="registerform">
                         <div class="form-group">
@@ -41,7 +97,7 @@ $areas = CallAPI("GET", $DB."/list.php?a=list");
                         </div>
                         <div class="form-group">
                         <label for="keuzes">Choose Your type of food</label> <br />
-                        <select id="keuzes" class="form-control">
+                        <select id="keuzes" class="form-control" name="keuzes">
                         <?php 
                         
                         for( $i =0; $i<=19;$i++){
@@ -66,4 +122,28 @@ $areas = CallAPI("GET", $DB."/list.php?a=list");
     </div>
 </div>
 </body>
+<script>
+    var overeenpas = "<?php echo $overeenkomstpass; ?>";
+    var userkort = "<?php echo $usertekort; ?>";
+    var passkort = "<?php echo $passtekort; ?>";
+    var bestaatal = "<?php echo $bestaatal; ?>";
+    if(overeenpas==true){
+      document.getElementById("fout").innerHTML += "passwords doesnt match <br>" ; //paswoords
+    }
+    else if(userkort==true){
+    document.getElementById("fout").innerHTML += "username is to short, atleast 6 characters <br>" ; //user
+    }
+    else if(passkort==true){
+    document.getElementById("fout").innerHTML += "password is to short, atleast 6 characters <br>" ;//user
+    }
+    else if(bestaatal==true){
+    document.getElementById("fout").innerHTML += "This user already excist <br>" ;//user
+    }
+    else{
+        document.getElementById("fout").innerHTML = "" ;//leeg
+    }
+    
+
+    
+</script>
 </html>

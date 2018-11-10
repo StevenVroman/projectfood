@@ -5,8 +5,9 @@ $anderlecht: #3C153B;
 $babykleur: #89BD9E;
 $vanillegeelachtig : #F0C987;
 $rood: #DB4C40;
+$widthlogin : 450px;
 
-div#error {
+body#error {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     margin: auto;
@@ -38,13 +39,14 @@ body#registerpage {
 
 div#login,
 div#register {
-    width: 400px;
+    min-width: $widthlogin -75px;
+    max-width: $widthlogin;
     text-align: center;
     margin: auto;
 
 
     img {
-        width: 250px;
+        width: 200px;
     }
 
     h3 {
@@ -67,16 +69,17 @@ div#register {
     .login-form-2 {
         color: $textcolor;
         background-color: $anderlecht;
-        border-radius: 1rem;
+        border: 6px $pinky solid;
         height: 100%;
-        opacity: 0.9;
+        opacity: 0.8;
+        border-radius: 1rem;
 
         .form-control {
             font-size: 12px;
             border-radius: 1.5rem;
             background-color: $pinky;
             color: $textcolor;
-            border: $rood 2px solid;
+            border: $rood 1px solid;
 
         }
 
@@ -91,7 +94,7 @@ div#register {
             height: 50px;
             width: 100%;
             background-color: $pinky;
-            border: 3px $rood solid;
+            border: 2px $rood solid;
             border-radius: 1.5rem;
             text-transform: uppercase;
             color: $textcolor;

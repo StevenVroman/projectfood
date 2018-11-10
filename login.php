@@ -58,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="col-12 login-form-2">
                 <div id="logopic">
                 <img src="pics/logowhite.png" alt="logo"> 
+                <h3 id='waar'></h3>
                 </div>
                     <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="loginform">
                         <div class="form-group">
@@ -87,12 +88,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script>
 
    var verkeerdpas = "<?php echo $wrongpass; ?>";
+
    if (verkeerdpas==true){
+    document.getElementById("waar").innerHTML="Password or Username is wrong";
        //message tonen dat niet overeenkomt
-       para = document.createElement("h3");
-        node = document.createTextNode("Username and or Password doestn match" );
-        para.appendChild(node);
-       document.getElementById("logopic").insertBefore(para, null);
+       //para = document.createElement("h3");
+       // node = document.createTextNode("Username and or Password doestn match" );
+       // para.appendChild(node);
+       //document.getElementById("logopic").insertBefore(para, null);
+    verkeerdpas=false;
+   }
+   else{
+    document.getElementById("waar").innerHTML="";
    }
    if ($forgotpass==true){
        var forgotpass = "<?php echo $forgotpass;?>";

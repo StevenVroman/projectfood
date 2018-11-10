@@ -1,4 +1,4 @@
-div#error {
+body#error {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   margin: auto;
@@ -7,7 +7,7 @@ div#error {
   background-color: #3C153B;
   color: #F3EFF5;
 }
-div#error h1 {
+body#error h1 {
   font-size: 4rem;
   text-transform: uppercase;
 }
@@ -27,13 +27,14 @@ body#registerpage {
 
 div#login,
 div#register {
-  width: 400px;
+  min-width: 450px -75px;
+  max-width: 450px;
   text-align: center;
   margin: auto;
 }
 div#login img,
 div#register img {
-  width: 250px;
+  width: 200px;
 }
 div#login h3,
 div#register h3 {
@@ -54,9 +55,10 @@ div#login .login-form-2,
 div#register .login-form-2 {
   color: #F3EFF5;
   background-color: #3C153B;
-  border-radius: 1rem;
+  border: 6px #490012 solid;
   height: 100%;
-  opacity: 0.9;
+  opacity: 0.8;
+  border-radius: 1rem;
 }
 div#login .login-form-2 .form-control,
 div#register .login-form-2 .form-control {
@@ -64,7 +66,7 @@ div#register .login-form-2 .form-control {
   border-radius: 1.5rem;
   background-color: #490012;
   color: #F3EFF5;
-  border: #DB4C40 2px solid;
+  border: #DB4C40 1px solid;
 }
 div#login .login-form-2 .form-control:focus,
 div#register .login-form-2 .form-control:focus {
@@ -79,7 +81,7 @@ div#register .login-form-2 .btnregis {
   height: 50px;
   width: 100%;
   background-color: #490012;
-  border: 3px #DB4C40 solid;
+  border: 2px #DB4C40 solid;
   border-radius: 1.5rem;
   text-transform: uppercase;
   color: #F3EFF5;
