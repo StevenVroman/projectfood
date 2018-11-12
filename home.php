@@ -20,36 +20,31 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
-<body id="home">
-<div id="top">
-    <div id="navigatie"> 
-    <div class="row">
-    <nav class="navbar navbar-expand-lg ">
-            <img src="/pics/logowhite.png" alt = "logo">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto justify-content-center  align-bottom">
-                 <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Disabled</a>
-                </li>
-            </ul>
-        <form class="form-top col-lg-8 col-md-8 col-sm-7 col-xs-12 row">
-                <input id="profiel" type="submit" class="btnregis mx-auto form-control col-lg-5 col-md-5 col-sm-5 col-xs-12" value="Profiel" name="Profiel" onclick="window.location.href='register.php'" />
-                <input id= "logout" type="submit" class="btnregis mx-auto  form-control col-lg-5 col-md-5 col-sm-5 col-xs-12" value="Logout" name="Logout" onclick="window.location.href='register.php'" />
-        </form>
-    </div>
+<body id="home" class="container-fluid">
+<div id="top" class="row">
+    <div id="navigatie" class="col-12"> 
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Disabled</a>
+            </li>
+         </ul>
+        </div>
     </nav>
     </div>
-    </div>
-
 </div>
 
     

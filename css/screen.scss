@@ -7,7 +7,7 @@ $babykleur: #89BD9E;
 $vanillegeelachtig : #F0C987;
 $rood: #DB4C40;
 $widthlogin : 450px;
-$hoogtehome: 80px;
+$hoogtehome: 60px;
 $paddingtop: 20px;
 
 body#error {
@@ -54,17 +54,6 @@ body {
     .btnSubmit:active {
         box-shadow: none;
     }
-
-    @media (min-width: 768px) {
-        .navbar-collapse.collapse {
-            display: block !important;
-            height: auto !important;
-            padding-bottom: 0;
-            overflow: visible !important;
-            visibility: visible !important;
-        }
-    }
-
 }
 
 
@@ -155,28 +144,7 @@ body#registerpage {
 body#home {
     //small
 
-    @media (max-width: 575.98px) {
-        div#top {
-            height: $hoogtehome * 1.5;
-        }
-
-        .form-top,
-        row {
-            max-width: 100%;
-            margin: 0px;
-            float: none;
-            position: absolute;
-        }
-
-        .btnregis {
-            margin: 0px;
-        }
-
-        img {
-            visibility: hidden;
-        }
-
-    }
+    @media (max-width: 575.98px) {}
 
 
     font-family: 'Montserrat',
@@ -186,43 +154,39 @@ body#home {
 
 
     div#top {
-
-        position: relative;
+        background-color: rgba($donkerpaars, $alpha: 0.8);
+        height: $hoogtehome;
 
         div#navigatie {
-            img {
-                width: 120px;
-            }
-
             height: 100%;
             font-family: 'Montserrat',
-            sans-serif;
+                sans-serif;
             text-transform: uppercase;
+            max-width: 100%;
             font-weight: 700;
             font-size: 12px;
             margin: 0px;
-            position: relative;
-            background-color: rgba($donkerpaars, $alpha: 0.8);
+            top: $hoogtehome;
+            color: $textcolor;
+            background-color: $anderlecht;
 
-            ul.navbar-nav {
-                position: absolute;
-                bottom: 2px;
+            span.navbar-toggler-icon {
+                color: $textcolor;
             }
 
-            .form-top {
-                max-width: 450px;
-                float: right;
-                margin: 2px;
-
-                input#profiel,
-                input#logout {
-                    margin-top: 5px;
-                    margin-left: 5px;
+            ul {
+                li {
+                    padding-left: 40px;
+                    padding-top: 10px;
                     letter-spacing: 3px;
+                    box-sizing: border-box;
                 }
             }
 
+        }
 
+        a {
+            color: $textcolor;
         }
     }
 
