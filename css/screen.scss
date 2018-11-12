@@ -189,12 +189,14 @@ body#home {
 
         position: relative;
 
-
         div#navigatie {
+            img {
+                width: 120px;
+            }
 
             height: 100%;
             font-family: 'Montserrat',
-                sans-serif;
+            sans-serif;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 12px;
@@ -202,8 +204,9 @@ body#home {
             position: relative;
             background-color: rgba($donkerpaars, $alpha: 0.8);
 
-            .nav-bar {
+            ul.navbar-nav {
                 position: absolute;
+                bottom: 2px;
             }
 
             .form-top {

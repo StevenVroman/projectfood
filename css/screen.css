@@ -174,8 +174,12 @@ body#home div#top div#navigatie {
   position: relative;
   background-color: rgba(49, 18, 75, 0.8);
 }
-body#home div#top div#navigatie .nav-bar {
+body#home div#top div#navigatie img {
+  width: 120px;
+}
+body#home div#top div#navigatie ul.navbar-nav {
   position: absolute;
+  bottom: 2px;
 }
 body#home div#top div#navigatie .form-top {
   max-width: 450px;

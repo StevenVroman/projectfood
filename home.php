@@ -23,12 +23,12 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
 <body id="home">
 <div id="top">
     <div id="navigatie"> 
+    <div class="row">
     <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="#">Navbar</a>
+            <img src="/pics/logowhite.png" alt = "logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto justify-content-center  align-bottom">
                  <li class="nav-item active">
@@ -47,6 +47,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
         </form>
     </div>
     </nav>
+    </div>
     </div>
 
 </div>
