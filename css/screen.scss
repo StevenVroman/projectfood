@@ -7,7 +7,7 @@ $babykleur: #89BD9E;
 $vanillegeelachtig : #F0C987;
 $rood: #DB4C40;
 $widthlogin : 450px;
-$hoogtehome: 150px;
+$hoogtehome: 80px;
 $paddingtop: 20px;
 
 body#error {
@@ -36,7 +36,7 @@ body {
         width: 100%;
         background-color: $donkerpaars;
         opacity: 0.8;
-        border: 3px $vanillegeelachtig solid;
+        border: 3px $rood solid;
         border-radius: 1.5rem;
         text-transform: uppercase;
         color: $textcolor;
@@ -53,6 +53,16 @@ body {
 
     .btnSubmit:active {
         box-shadow: none;
+    }
+
+    @media (min-width: 768px) {
+        .navbar-collapse.collapse {
+            display: block !important;
+            height: auto !important;
+            padding-bottom: 0;
+            overflow: visible !important;
+            visibility: visible !important;
+        }
     }
 
 }
@@ -103,7 +113,7 @@ body#registerpage {
 
         .login-form-2 {
             color: $textcolor;
-            background-color: $donkerpaars;
+            background-color: rgba($donkerpaars, $alpha: 0.9);
             border: 6px $anderlecht solid;
             height: 100%;
             opacity: 0.8;
@@ -143,21 +153,45 @@ body#registerpage {
 }
 
 body#home {
+    //small
+
+    @media (max-width: 575.98px) {
+        div#top {
+            height: $hoogtehome * 1.5;
+        }
+
+        .form-top,
+        row {
+            max-width: 100%;
+            margin: 0px;
+            float: none;
+            position: absolute;
+        }
+
+        .btnregis {
+            margin: 0px;
+        }
+
+        img {
+            visibility: hidden;
+        }
+
+    }
+
+
     font-family: 'Montserrat',
-        sans-serif;
+    sans-serif;
     text-transform: lowercase;
     font-weight: 400;
 
+
     div#top {
-        background-image: url("/pics/bgimages.jpg");
-        background-repeat: repeat;
-        height: $hoogtehome;
+
         position: relative;
 
 
         div#navigatie {
-            background-color: $donkerpaars;
-            opacity: 0.8;
+
             height: 100%;
             font-family: 'Montserrat',
                 sans-serif;
@@ -166,27 +200,26 @@ body#home {
             font-size: 12px;
             margin: 0px;
             position: relative;
+            background-color: rgba($donkerpaars, $alpha: 0.8);
 
-            div#logopic {
-                text-align: center;
-                height: 100%;
+            .nav-bar {
                 position: absolute;
-                top: -30px;
+            }
 
-                img {
-                    width: 180px;
-                    margin: auto;
+            .form-top {
+                max-width: 450px;
+                float: right;
+                margin: 2px;
 
-
+                input#profiel,
+                input#logout {
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    letter-spacing: 3px;
                 }
-
-
             }
 
-            input#profiel,
-            input#logout {
-                margin-left: 5px;
-            }
+
         }
     }
 
