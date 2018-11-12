@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             if($bestaatal==false){
                 $users = CallAPI("POST", $DB2."/tblusers",json_encode($user)); // goed
+                header("location: login.php");
             }
             
             }

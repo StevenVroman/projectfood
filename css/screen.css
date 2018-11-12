@@ -12,104 +12,158 @@ body#error h1 {
   text-transform: uppercase;
 }
 
-body#loginpage,
-body#registerpage {
-  background-color: #3C153B;
-  background-image: url("/pics/bgimages.jpg");
-  background-repeat: repeat;
-}
-
-.fill {
-  min-height: 100%;
-  height: 100%;
-  padding-top: 100px;
-}
-
-div#login,
-div#register {
-  min-width: 450px -75px;
-  max-width: 450px;
-  text-align: center;
-  margin: auto;
-}
-div#login img,
-div#register img {
-  width: 200px;
-}
-div#login h3,
-div#register h3 {
-  font-size: 11px;
-  padding-bottom: 20px;
-}
-div#login .container,
-div#register .container {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
-div#login label,
-div#register label {
-  font-size: 14px;
-  text-transform: none;
-}
-div#login .login-form-2,
-div#register .login-form-2 {
-  color: #F3EFF5;
-  background-color: #3C153B;
-  border: 6px #490012 solid;
-  height: 100%;
-  opacity: 0.8;
-  border-radius: 1rem;
-}
-div#login .login-form-2 .form-control,
-div#register .login-form-2 .form-control {
-  font-size: 12px;
-  border-radius: 1.5rem;
-  background-color: #490012;
-  color: #F3EFF5;
-  border: #DB4C40 1px solid;
-}
-div#login .login-form-2 .form-control:focus,
-div#register .login-form-2 .form-control:focus {
-  box-shadow: none;
-}
-div#login .login-form-2 .btnSubmit,
-div#login .login-form-2 .btnregis,
-div#register .login-form-2 .btnSubmit,
-div#register .login-form-2 .btnregis {
+body .btnSubmit,
+body .btnregis {
   font-weight: 700;
   font-size: 12px;
   height: 50px;
   width: 100%;
-  background-color: #490012;
-  border: 3px #490012 solid;
+  background-color: #31124b;
+  opacity: 0.8;
+  border: 3px #F0C987 solid;
   border-radius: 1.5rem;
   text-transform: uppercase;
   color: #F3EFF5;
   margin-top: 20px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
-div#login .login-form-2 .btnSubmit:hover,
-div#login .login-form-2 .btnregis:hover,
-div#register .login-form-2 .btnSubmit:hover,
-div#register .login-form-2 .btnregis:hover {
-  border: #DB4C40 3px solid;
+body .btnSubmit:hover,
+body .btnregis:hover {
+  background-color: #3C153B;
 }
-div#login .login-form-2 .btnSubmit:active,
-div#register .login-form-2 .btnSubmit:active {
+body .btnSubmit:active {
   box-shadow: none;
 }
-div#login .login-form-2 .btnForgetPwd,
-div#register .login-form-2 .btnForgetPwd {
+
+body#loginpage,
+body#registerpage {
+  background-color: #490012;
+  background-image: url("/pics/bgimages.jpg");
+  background-repeat: repeat;
+}
+body#loginpage .fill,
+body#registerpage .fill {
+  min-height: 100%;
+  height: 100%;
+  padding-top: 100px;
+}
+body#loginpage div#login,
+body#loginpage div#register,
+body#registerpage div#login,
+body#registerpage div#register {
+  min-width: 450px -75px;
+  max-width: 450px;
+  text-align: center;
+  margin: auto;
+}
+body#loginpage div#login img,
+body#loginpage div#register img,
+body#registerpage div#login img,
+body#registerpage div#register img {
+  width: 200px;
+}
+body#loginpage div#login h3,
+body#loginpage div#register h3,
+body#registerpage div#login h3,
+body#registerpage div#register h3 {
+  font-size: 11px;
+  padding-bottom: 20px;
+}
+body#loginpage div#login .container,
+body#loginpage div#register .container,
+body#registerpage div#login .container,
+body#registerpage div#register .container {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+body#loginpage div#login label,
+body#loginpage div#register label,
+body#registerpage div#login label,
+body#registerpage div#register label {
+  font-size: 14px;
+  text-transform: none;
+}
+body#loginpage div#login .login-form-2,
+body#loginpage div#register .login-form-2,
+body#registerpage div#login .login-form-2,
+body#registerpage div#register .login-form-2 {
+  color: #F3EFF5;
+  background-color: #31124b;
+  border: 6px #3C153B solid;
+  height: 100%;
+  opacity: 0.8;
+  border-radius: 1rem;
+}
+body#loginpage div#login .login-form-2 .form-control,
+body#loginpage div#register .login-form-2 .form-control,
+body#registerpage div#login .login-form-2 .form-control,
+body#registerpage div#register .login-form-2 .form-control {
+  font-size: 12px;
+  border-radius: 1.5rem;
+  background-color: #3C153B;
+  color: #F3EFF5;
+  border: #F0C987 1px solid;
+}
+body#loginpage div#login .login-form-2 .form-control:focus,
+body#loginpage div#register .login-form-2 .form-control:focus,
+body#registerpage div#login .login-form-2 .form-control:focus,
+body#registerpage div#register .login-form-2 .form-control:focus {
+  box-shadow: none;
+}
+body#loginpage div#login .login-form-2 .btnForgetPwd,
+body#loginpage div#register .login-form-2 .btnForgetPwd,
+body#registerpage div#login .login-form-2 .btnForgetPwd,
+body#registerpage div#register .login-form-2 .btnForgetPwd {
   text-decoration: none;
   color: #F3EFF5;
   margin-top: 20px;
   text-align: center;
   font-size: 11px;
 }
-div#login .login-form-2 .btnForgetPwd:hover,
-div#register .login-form-2 .btnForgetPwd:hover {
+body#loginpage div#login .login-form-2 .btnForgetPwd:hover,
+body#loginpage div#register .login-form-2 .btnForgetPwd:hover,
+body#registerpage div#login .login-form-2 .btnForgetPwd:hover,
+body#registerpage div#register .login-form-2 .btnForgetPwd:hover {
   text-decoration: none;
   color: lightblue;
+}
+
+body#home {
+  font-family: "Montserrat", sans-serif;
+  text-transform: lowercase;
+  font-weight: 400;
+}
+body#home div#top {
+  background-image: url("/pics/bgimages.jpg");
+  background-repeat: repeat;
+  height: 150px;
+  position: relative;
+}
+body#home div#top div#navigatie {
+  background-color: #31124b;
+  opacity: 0.8;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0px;
+  position: relative;
+}
+body#home div#top div#navigatie div#logopic {
+  text-align: center;
+  height: 100%;
+  position: absolute;
+  top: -30px;
+}
+body#home div#top div#navigatie div#logopic img {
+  width: 180px;
+  margin: auto;
+}
+body#home div#top div#navigatie input#profiel,
+body#home div#top div#navigatie input#logout {
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=screen.css.map */
