@@ -21,29 +21,41 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
     <link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
 <body id="home" class="container-fluid">
-<div id="top" class="row">
+<div id="top" class="row"> 
+            <div id="topbutton" class="col-11">
+                <div class="row float-right">
+                <input type="submit" class="btnregis form-control col-3" value="Profiel" name="Profiel" onclick="window.location.href='register.php'" />
+                <input type="submit" class="btnregis form-control col-3" value="logout" name="logout" onclick="window.location.href='register.php'" />
+                </div>
+            </div>
     <div id="navigatie" class="col-12"> 
+       
+
         <nav class="navbar navbar-expand-lg navbar-dark ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                 <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                 <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Disabled</a>
-            </li>
-         </ul>
-        </div>
-    </nav>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Home</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link active" href="#">Lookup Meal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Latest Added</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Random Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Your Region</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        
     </div>
 </div>
 

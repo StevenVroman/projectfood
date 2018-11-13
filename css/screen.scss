@@ -7,7 +7,7 @@ $babykleur: #89BD9E;
 $vanillegeelachtig : #F0C987;
 $rood: #DB4C40;
 $widthlogin : 450px;
-$hoogtehome: 60px;
+$hoogtehome: 50px;
 $paddingtop: 20px;
 
 body#error {
@@ -144,7 +144,18 @@ body#registerpage {
 body#home {
     //small
 
-    @media (max-width: 575.98px) {}
+    @media (max-width: 987px) {
+        ul {
+            li {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
+        .active {
+            background-color: $donkerpaars;
+        }
+    }
 
 
     font-family: 'Montserrat',
@@ -153,9 +164,31 @@ body#home {
     font-weight: 400;
 
 
+
     div#top {
-        background-color: rgba($donkerpaars, $alpha: 0.8);
-        height: $hoogtehome;
+        height: 100%;
+        position: relative;
+        background-image: url("/pics/bgimages.jpg");
+
+        div#topbutton {
+            height: 0px !important;
+            padding: 2px;
+            margin: 5px;
+            box-sizing: border-box;
+
+
+            .btnregis {
+                margin: 0px;
+                margin-left: 5px;
+                padding: 0px;
+                min-width: 150px;
+                letter-spacing: 3px;
+            }
+
+            div {
+                height: 0px;
+            }
+        }
 
         div#navigatie {
             height: 100%;
@@ -168,18 +201,43 @@ body#home {
             margin: 0px;
             top: $hoogtehome;
             color: $textcolor;
-            background-color: $anderlecht;
+            background-color: $donkerpaars;
+            border-bottom: solid 5px $rood;
 
             span.navbar-toggler-icon {
                 color: $textcolor;
+
+            }
+
+            .navbar {
+                padding: 0px;
+                padding-top: 15px;
+                padding-bottom: 0px;
+
+                button {
+                    margin-bottom: 20px;
+                }
             }
 
             ul {
                 li {
-                    padding-left: 40px;
-                    padding-top: 10px;
-                    letter-spacing: 3px;
+                    padding-bottom: 0px;
                     box-sizing: border-box;
+                    text-align: center;
+
+                    a {
+                        min-width: 200px;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                        margin: auto;
+                        padding-left: 0;
+                    }
+
+
+                    .active {
+                        background-color: #DB4C40;
+                    }
                 }
             }
 
@@ -188,6 +246,8 @@ body#home {
         a {
             color: $textcolor;
         }
+
+
     }
 
 }
