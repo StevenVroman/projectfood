@@ -168,7 +168,7 @@ body#home {
     div#top {
         height: 100%;
         position: relative;
-        background-image: url("/pics/bgimages.jpg");
+        background-color: $donkerpaars;
 
         div#topbutton {
             height: 0px !important;
@@ -181,7 +181,7 @@ body#home {
                 margin: 0px;
                 margin-left: 5px;
                 padding: 0px;
-                min-width: 150px;
+                min-width: 120px;
                 letter-spacing: 3px;
             }
 
