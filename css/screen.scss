@@ -157,6 +157,12 @@ body#home {
         }
     }
 
+    @media (max-width: 1325px) {
+        div#logo {
+            visibility: hidden;
+        }
+    }
+
 
     font-family: 'Montserrat',
     sans-serif;
@@ -169,6 +175,16 @@ body#home {
         height: 100%;
         position: relative;
         background-color: $donkerpaars;
+
+        div#logo {
+            position: absolute;
+            top: 0px;
+
+            img {
+                width: 200px;
+            }
+        }
+
 
         div#topbutton {
             height: 0px !important;
@@ -204,10 +220,7 @@ body#home {
             background-color: $donkerpaars;
             border-bottom: solid 5px $rood;
 
-            span.navbar-toggler-icon {
-                color: $textcolor;
 
-            }
 
             .navbar {
                 padding: 0px;
@@ -216,6 +229,12 @@ body#home {
 
                 button {
                     margin-bottom: 20px;
+                    background-color: #DB4C40;
+
+                    span.navbar-toggler-icon {
+                        color: $rood;
+
+                    }
                 }
             }
 

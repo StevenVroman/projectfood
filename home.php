@@ -18,6 +18,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
 <body id="home" class="container-fluid">
@@ -29,9 +30,9 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
                 </div>
             </div>
     <div id="navigatie" class="col-12"> 
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav justify-content-center">
@@ -39,7 +40,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
                     <a class="nav-link " href="#">Home</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Lookup Meal</a>
+                    <a class="nav-link" href="#">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Latest Added</a>
@@ -56,6 +57,9 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
         
         
     </div>
+    <div id="logo">
+        <img src="/pics/logowhite2.png" alt="logo">
+    </div>  
 </div>
 
     

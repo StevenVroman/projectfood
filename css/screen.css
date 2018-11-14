@@ -143,10 +143,22 @@ body#home {
     background-color: #31124b;
   }
 }
+@media (max-width: 1325px) {
+  body#home div#logo {
+    visibility: hidden;
+  }
+}
 body#home div#top {
   height: 100%;
   position: relative;
   background-color: #31124b;
+}
+body#home div#top div#logo {
+  position: absolute;
+  top: 0px;
+}
+body#home div#top div#logo img {
+  width: 200px;
 }
 body#home div#top div#topbutton {
   height: 0px !important;
@@ -177,9 +189,6 @@ body#home div#top div#navigatie {
   background-color: #31124b;
   border-bottom: solid 5px #DB4C40;
 }
-body#home div#top div#navigatie span.navbar-toggler-icon {
-  color: #F3EFF5;
-}
 body#home div#top div#navigatie .navbar {
   padding: 0px;
   padding-top: 15px;
@@ -187,6 +196,10 @@ body#home div#top div#navigatie .navbar {
 }
 body#home div#top div#navigatie .navbar button {
   margin-bottom: 20px;
+  background-color: #DB4C40;
+}
+body#home div#top div#navigatie .navbar button span.navbar-toggler-icon {
+  color: #DB4C40;
 }
 body#home div#top div#navigatie ul li {
   padding-bottom: 0px;
