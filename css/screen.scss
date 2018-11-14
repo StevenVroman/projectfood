@@ -31,8 +31,8 @@ body {
     .btnSubmit,
     .btnregis {
         font-weight: 700;
-        font-size: 10px;
-        height: 40px;
+        font-size: 12px;
+        height: 50px;
         width: 100%;
         background-color: $donkerpaars;
         opacity: 0.8;
@@ -155,14 +155,6 @@ body#home {
         .active {
             background-color: $donkerpaars;
         }
-
-        div#logo {
-
-            img {
-                visibility: hidden;
-
-            }
-        }
     }
 
 
@@ -177,17 +169,6 @@ body#home {
         height: 100%;
         position: relative;
         background-color: $donkerpaars;
-
-        div#logo {
-            position: absolute;
-            left: 20px;
-            top: -5px;
-
-            img {
-                width: 200px;
-
-            }
-        }
 
         div#topbutton {
             height: 0px !important;
@@ -216,12 +197,12 @@ body#home {
             text-transform: uppercase;
             max-width: 100%;
             font-weight: 700;
+            font-size: 12px;
             margin: 0px;
             top: $hoogtehome;
             color: $textcolor;
             background-color: $donkerpaars;
             border-bottom: solid 5px $rood;
-            letter-spacing: 2px;
 
             span.navbar-toggler-icon {
                 color: $textcolor;
@@ -232,7 +213,6 @@ body#home {
                 padding: 0px;
                 padding-top: 15px;
                 padding-bottom: 0px;
-                font-size: 11px;
 
                 button {
                     margin-bottom: 20px;

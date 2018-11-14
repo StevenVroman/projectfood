@@ -15,8 +15,8 @@ body#error h1 {
 body .btnSubmit,
 body .btnregis {
   font-weight: 700;
-  font-size: 10px;
-  height: 40px;
+  font-size: 12px;
+  height: 50px;
   width: 100%;
   background-color: #31124b;
   opacity: 0.8;
@@ -142,22 +142,11 @@ body#home {
   body#home .active {
     background-color: #31124b;
   }
-  body#home div#logo img {
-    visibility: hidden;
-  }
 }
 body#home div#top {
   height: 100%;
   position: relative;
   background-color: #31124b;
-}
-body#home div#top div#logo {
-  position: absolute;
-  left: 20px;
-  top: -5px;
-}
-body#home div#top div#logo img {
-  width: 200px;
 }
 body#home div#top div#topbutton {
   height: 0px !important;
@@ -181,12 +170,12 @@ body#home div#top div#navigatie {
   text-transform: uppercase;
   max-width: 100%;
   font-weight: 700;
+  font-size: 12px;
   margin: 0px;
   top: 50px;
   color: #F3EFF5;
   background-color: #31124b;
   border-bottom: solid 5px #DB4C40;
-  letter-spacing: 2px;
 }
 body#home div#top div#navigatie span.navbar-toggler-icon {
   color: #F3EFF5;
@@ -195,7 +184,6 @@ body#home div#top div#navigatie .navbar {
   padding: 0px;
   padding-top: 15px;
   padding-bottom: 0px;
-  font-size: 11px;
 }
 body#home div#top div#navigatie .navbar button {
   margin-bottom: 20px;

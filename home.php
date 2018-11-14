@@ -22,12 +22,12 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
 </head>
 <body id="home" class="container-fluid">
 <div id="top" class="row"> 
-    <div id="topbutton" class="col-11">
+            <div id="topbutton" class="col-11">
                 <div class="row float-right">
                 <input type="submit" class="btnregis form-control col-3" value="Profiel" name="Profiel" onclick="window.location.href='register.php'" />
-                <input type="submit" class="btnregis form-control col-3" value="logout" name="logout" onclick="window.location.href='logout.php'" />
+                <input type="submit" class="btnregis form-control col-3" value="logout" name="logout" onclick="window.location.href='register.php'" />
                 </div>
-    </div>
+            </div>
     <div id="navigatie" class="col-12"> 
     <nav class="navbar navbar-expand-lg navbar-dark ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
                     <a class="nav-link " href="#">Home</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Lookup Meal</a>
+                    <a class="nav-link active" href="#">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Latest Added</a>
@@ -55,9 +55,6 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
         </nav>
         
         
-    </div>
-    <div id="logo">
-        <img src="/pics/logowhite2.png" alt="logo">
     </div>
 </div>
 
