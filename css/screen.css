@@ -156,6 +156,7 @@ body#home div#top {
 body#home div#top div#logo {
   position: absolute;
   top: 0px;
+  padding-left: 20px;
 }
 body#home div#top div#logo img {
   width: 200px;
@@ -172,6 +173,7 @@ body#home div#top div#topbutton .btnregis {
   padding: 0px;
   min-width: 120px;
   letter-spacing: 3px;
+  height: 35px;
 }
 body#home div#top div#topbutton div {
   height: 0px;
@@ -188,6 +190,7 @@ body#home div#top div#navigatie {
   color: #F3EFF5;
   background-color: #31124b;
   border-bottom: solid 5px #DB4C40;
+  letter-spacing: 3px;
 }
 body#home div#top div#navigatie .navbar {
   padding: 0px;

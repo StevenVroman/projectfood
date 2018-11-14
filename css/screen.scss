@@ -179,6 +179,7 @@ body#home {
         div#logo {
             position: absolute;
             top: 0px;
+            padding-left: 20px;
 
             img {
                 width: 200px;
@@ -199,6 +200,7 @@ body#home {
                 padding: 0px;
                 min-width: 120px;
                 letter-spacing: 3px;
+                height: 35px;
             }
 
             div {
@@ -219,6 +221,7 @@ body#home {
             color: $textcolor;
             background-color: $donkerpaars;
             border-bottom: solid 5px $rood;
+            letter-spacing: 3px;
 
 
 
