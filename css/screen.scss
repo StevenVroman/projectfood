@@ -30,7 +30,7 @@ body {
 
     .btnSubmit,
     .btnregis {
-        font-weight: 700;
+        font-weight: 500;
         font-size: 12px;
         height: 50px;
         width: 100%;
@@ -214,7 +214,7 @@ body#home {
                 sans-serif;
             text-transform: uppercase;
             max-width: 100%;
-            font-weight: 700;
+            font-weight: 400;
             font-size: 12px;
             margin: 0px;
             top: $hoogtehome;
@@ -259,6 +259,7 @@ body#home {
 
                     .active {
                         background-color: #DB4C40;
+
                     }
                 }
             }
@@ -267,6 +268,10 @@ body#home {
 
         a {
             color: $textcolor;
+        }
+
+        a:hover {
+            color: $vanillegeelachtig;
         }
 
 

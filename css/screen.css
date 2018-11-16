@@ -14,7 +14,7 @@ body#error h1 {
 
 body .btnSubmit,
 body .btnregis {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 12px;
   height: 50px;
   width: 100%;
@@ -183,7 +183,7 @@ body#home div#top div#navigatie {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   max-width: 100%;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 12px;
   margin: 0px;
   top: 50px;
@@ -222,6 +222,9 @@ body#home div#top div#navigatie ul li .active {
 }
 body#home div#top a {
   color: #F3EFF5;
+}
+body#home div#top a:hover {
+  color: #F0C987;
 }
 
 /*# sourceMappingURL=screen.css.map */

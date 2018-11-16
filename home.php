@@ -37,7 +37,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Home</a>
+                    <a class="nav-link active" href="#">Home</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Lookup Meal</a>
@@ -53,9 +53,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
                 </li>
             </ul>
             </div>
-        </nav>
-        
-        
+        </nav>  
     </div>
     <div id="logo">
         <img src="/pics/logowhite2.png" alt="logo">
