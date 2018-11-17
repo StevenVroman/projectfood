@@ -163,7 +163,7 @@ body#home div#top {
 }
 body#home div#top div#logo {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 45%;
 }
 body#home div#top div#logo img {
@@ -226,7 +226,7 @@ body#home div#top div#navigatie ul li a {
 }
 body#home div#top div#navigatie ul li .active {
   background-color: #DB4C40;
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 body#home div#top a {
   color: #F3EFF5;
