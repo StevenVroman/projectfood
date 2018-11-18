@@ -20,7 +20,7 @@ body .btnregis {
   width: 100%;
   background-color: #31124b;
   opacity: 0.8;
-  border: 3px #DB4C40 solid;
+  border: 3px #F0C987 solid;
   border-radius: 1.5rem;
   text-transform: uppercase;
   color: #F3EFF5;
@@ -129,53 +129,63 @@ body#registerpage div#register .login-form-2 .btnForgetPwd:hover {
   color: lightblue;
 }
 
-body#home {
-  font-family: "Montserrat", sans-serif;
-  text-transform: lowercase;
-  font-weight: 600;
-}
 @media (max-width: 987px) {
-  body#home ul li {
+  ul li {
     margin: 0px;
     padding: 0px;
   }
-  body#home div#top div#navigatie {
+
+  div#top div#navigatie {
     padding: 0px;
   }
-  body#home .active {
+
+  .active {
     background-color: #DB4C40;
     border-radius: 0px 0px 0px 0px !important;
   }
-  body#home div#logo {
+
+  div#logo {
     left: 15% !important;
     top: 80px !important;
   }
+
+  button.navbar-toggler {
+    margin-left: 20px;
+  }
 }
 @media (max-width: 1325px) {
-  body#home div#logo {
+  div#logo {
     left: 40% !important;
   }
 }
-body#home div#top {
+body {
+  font-family: "Montserrat", sans-serif;
+  text-transform: lowercase;
+  font-weight: 600;
+  height: 100%;
+}
+
+div#top {
   height: 100%;
   position: relative;
   background-color: #31124b;
+  opacity: 0.9;
 }
-body#home div#top div#logo {
+div#top div#logo {
   position: absolute;
   top: 10px;
   left: 45%;
 }
-body#home div#top div#logo img {
+div#top div#logo img {
   width: 200px;
 }
-body#home div#top div#topbutton {
+div#top div#topbutton {
   height: 80px !important;
   padding: 2px;
   margin: 5px;
   box-sizing: border-box;
 }
-body#home div#top div#topbutton .btnregis {
+div#top div#topbutton .btnregis {
   margin: 0px;
   margin-left: 5px;
   padding: 0px;
@@ -183,10 +193,10 @@ body#home div#top div#topbutton .btnregis {
   letter-spacing: 3px;
   height: 35px;
 }
-body#home div#top div#topbutton div {
+div#top div#topbutton div {
   height: 0px;
 }
-body#home div#top div#navigatie {
+div#top div#navigatie {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -196,27 +206,27 @@ body#home div#top div#navigatie {
   top: 50px;
   color: #F3EFF5;
   background-color: #31124b;
-  border-bottom: solid 5px #DB4C40;
+  border-bottom: solid 5px #F0C987;
   letter-spacing: 3px;
 }
-body#home div#top div#navigatie .navbar {
+div#top div#navigatie .navbar {
   padding: 0px;
   padding-top: 15px;
   padding-bottom: 0px;
 }
-body#home div#top div#navigatie .navbar button {
+div#top div#navigatie .navbar button {
   margin-bottom: 20px;
   background-color: #DB4C40;
 }
-body#home div#top div#navigatie .navbar button span.navbar-toggler-icon {
+div#top div#navigatie .navbar button span.navbar-toggler-icon {
   color: #DB4C40;
 }
-body#home div#top div#navigatie ul li {
+div#top div#navigatie ul li {
   padding-bottom: 0px;
   box-sizing: border-box;
   text-align: center;
 }
-body#home div#top div#navigatie ul li a {
+div#top div#navigatie ul li a {
   min-width: 200px;
   max-width: 100%;
   min-height: 100%;
@@ -224,15 +234,62 @@ body#home div#top div#navigatie ul li a {
   margin: auto;
   padding-left: 0;
 }
-body#home div#top div#navigatie ul li .active {
-  background-color: #DB4C40;
+div#top div#navigatie ul li .active {
+  background-color: #F0C987;
   border-radius: 15px 15px 0px 0px;
 }
-body#home div#top a {
+div#top a {
+  color: #DB4C40;
+}
+div#top a:hover {
   color: #F3EFF5;
 }
-body#home div#top a:hover {
-  color: #F0C987;
+
+body#home {
+  height: 100%;
+}
+body#home section#middle {
+  position: relative;
+  top: 50px;
+  min-height: 150px;
+  height: 100%;
+  background-image: url("/pics/bgimages.jpg");
+}
+body#home section#middle div {
+  background-color: rgba(49, 18, 75, 0.8);
+  background-repeat: no-repeat;
+  padding: 20px;
+  box-sizing: border-box;
+  border-left: rgba(240, 201, 135, 0.4) 3px solid;
+  border-bottom: rgba(240, 201, 135, 0.4) 3px solid;
+  background-size: 500px;
+  z-index: 200;
+  height: 400px;
+  width: 100%;
+  background-position: bottom;
+}
+body#home section#middle div div {
+  position: absolute;
+  height: 75px;
+  width: 100%;
+  top: 322px;
+  border: none;
+  left: 15px;
+  background-color: rgba(60, 21, 59, 0.8);
+  display: block;
+  justify-content: center;
+}
+body#home section#middle div div h2 {
+  text-align: center !important;
+  font-size: 18px;
+  font-weight: 700;
+  color: #F3EFF5;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+body#home section#middle div:hover {
+  background-size: 550px;
 }
 
 /*# sourceMappingURL=screen.css.map */

@@ -38,8 +38,10 @@ if ($method === "POST" || $method === "PUT") {
     // als er geen input is bij deze method is de request verkeerd
     if (empty($input)) {
         // POST van een lege input is verboden!
-        http_response_code(400); // 400 = bad request
+        http_response_code(400);
+        header("location: 404.html"); // 400 = bad request
         echo "Bad request";
+        
         exit;
     }
     // escape & filter van de input (onze ontvangen json)
@@ -72,12 +74,14 @@ if ($method !== "POST" && !empty($key)) {
     if (!$result) {
         http_response_code(500);
         die(mysqli_error($link));
+        header("location: 404.html");
     }
     $pkData = mysqli_fetch_array($result);
 
 // geen pk gevonden
     if (empty($pkData) || !is_array($pkData) || !array_key_exists("Column_name", $pkData) || empty($pkData['Column_name'])) {
         http_response_code(500);
+        header("location: 404.html");
         exit;
     }
     $pk = $pkData['Column_name'];
