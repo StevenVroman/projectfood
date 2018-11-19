@@ -6,8 +6,8 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
 }
  ?>
 
- <?php include_once 'scripts/config.php';
-  include_once 'scripts/api.php';
+<?php include_once 'scripts/config.php';
+include_once 'scripts/api.php';
 $categories = CallAPI("GET", $DB."/categories.php"); 
 
 $count = 0;
@@ -77,9 +77,9 @@ foreach ($categories as $type) {
 <?php for( $i =0; $i<= $count-1;$i++){                        
     ?>
     
-    <div class="item col-lg-2 col-md-4 col-sm-12 " style="background-image:
+    <div class="item col-lg-3 col-md-6 col-sm-12 " style="background-image:
      url(<?php echo $categories['categories'][$i]['strCategoryThumb'] ?>)">
-        <a href="recipesover.php#catid="><div id="title" class="row col-12">
+        <a href="recipesover.php#catnaam=<?php echo $categories['categories'][$i]['strCategory'] ?>"><div id="title" class="row col-12">
          <h2><?php echo $categories['categories'][$i]['strCategory'] ?></h2>
         </div></a>
      </div><?php
