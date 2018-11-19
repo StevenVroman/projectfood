@@ -71,6 +71,7 @@ foreach ($categories as $type) {
         <img src="/pics/logowhite2.png" alt="logo">
     </div>  
 </div>
+<div>
 <section id="middle" class="row">
     
 <?php for( $i =0; $i<= $count-1;$i++){                        
@@ -78,7 +79,7 @@ foreach ($categories as $type) {
     
     <div class="item col-lg-2 col-md-4 col-sm-12 " style="background-image:
      url(<?php echo $categories['categories'][$i]['strCategoryThumb'] ?>)">
-        <a href="#url"><div id="title" class="row col-12">
+        <a href="recipesover.php#catid="><div id="title" class="row col-12">
          <h2><?php echo $categories['categories'][$i]['strCategory'] ?></h2>
         </div></a>
      </div><?php
@@ -86,5 +87,6 @@ foreach ($categories as $type) {
     ?>
    
 </section>
+</div>
 </body>
 </html>
