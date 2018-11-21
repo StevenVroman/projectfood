@@ -17,6 +17,7 @@ function CallAPI($method, $url, $data = false)
             if (!$data) {
                 echo "Kan niet updaten zonder data";
                 die(400);
+                header("location: 404.html");
             }
             // voor het updaten van een object gebruiken we PUT, hiermee laten we dit ook aan cURL weten
             curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
@@ -55,11 +56,13 @@ function CallAPI($method, $url, $data = false)
         $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         if (!($http_code = 200 || $http_code = 201)) {
             echo 'Unexpected HTTP code: ', $http_code, "\n";
+            header("location: 404.html");
             exit();
         }
     } else {
         echo "Request gaf volgende foutcode: " . curl_errno($curl) . "<br>";
         echo "Melding: " . curl_error($curl);
+        header("location: 404.html");
     }
     curl_close($curl);
     // indien het geen json result is geven we gewoon het resultaat terug

@@ -300,9 +300,7 @@ body#home {
     section#middle {
         position: relative;
         top: 50px;
-        min-height: 150px;
-        height: 100%;
-        padding: 40px;
+        height: 90% !important;
         background-image: url("/pics/bgimages.jpg");
 
         div {
@@ -310,8 +308,7 @@ body#home {
             background-repeat: no-repeat;
             padding: 20px;
             box-sizing: border-box;
-            border-left: rgba($vanillegeelachtig, $alpha: 0.4) 3px solid;
-            border-bottom: rgba($vanillegeelachtig, $alpha: 0.4) 3px solid;
+            border: rgba($vanillegeelachtig, $alpha: 0.4) 3px solid;
             background-size: 500px;
             z-index: 200;
             height: 400px;
