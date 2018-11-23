@@ -166,8 +166,7 @@ body {
 }
 
 div#top {
-  height: 100%;
-  position: relative;
+  max-height: 100%;
   background-color: #31124b;
   opacity: 0.9;
 }
@@ -180,7 +179,7 @@ div#top div#logo img {
   width: 200px;
 }
 div#top div#topbutton {
-  height: 80px !important;
+  height: 120px !important;
   padding: 2px;
   margin: 5px;
   box-sizing: border-box;
@@ -203,7 +202,6 @@ div#top div#navigatie {
   max-width: 100%;
   font-size: 12px;
   margin: 0px;
-  top: 50px;
   color: #F3EFF5;
   background-color: #31124b;
   border-bottom: solid 5px #F0C987;
@@ -244,20 +242,23 @@ div#top a {
 div#top a:hover {
   color: #F3EFF5;
 }
+div#top span.navbar-toggler-icon {
+  color: #F3EFF5;
+}
 
 body#home {
   height: 100%;
 }
-body#home section#middle {
-  position: relative;
-  top: 50px;
+body#home div section#middle {
+  padding: 20px;
   height: 90% !important;
+  z-index: 300;
   background-image: url("/pics/bgimages.jpg");
 }
-body#home section#middle div {
+body#home div section#middle div {
   background-color: rgba(49, 18, 75, 0.8);
   background-repeat: no-repeat;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
   border: rgba(240, 201, 135, 0.4) 3px solid;
   background-size: 500px;
@@ -266,7 +267,7 @@ body#home section#middle div {
   width: 100%;
   background-position: bottom;
 }
-body#home section#middle div div {
+body#home div section#middle div div {
   position: absolute;
   height: 75px;
   width: 100%;
@@ -277,7 +278,7 @@ body#home section#middle div div {
   display: block;
   justify-content: center;
 }
-body#home section#middle div div h2 {
+body#home div section#middle div div h2 {
   text-align: center !important;
   font-size: 18px;
   font-weight: 700;
@@ -286,7 +287,7 @@ body#home section#middle div div h2 {
   box-sizing: border-box;
   letter-spacing: 3px;
 }
-body#home section#middle div:hover {
+body#home div section#middle div:hover {
   background-size: 550px;
 }
 

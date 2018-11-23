@@ -42,7 +42,7 @@ foreach ($categories as $type) {
                 </div>
             </div>
     <div id="navigatie" class="col-12"> 
-        <nav class="navbar navbar-expand-lg navbar-dark ">
+        <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,7 +71,7 @@ foreach ($categories as $type) {
         <img src="/pics/logowhite2.png" alt="logo">
     </div>  
 </div>
-<div>
+<div class="">
 <section id="middle" class="row">
     
 <?php for( $i =0; $i<= $count-1;$i++){                        
@@ -88,5 +88,6 @@ foreach ($categories as $type) {
    
 </section>
 </div>
+<footer>test</footer>
 </body>
 </html>
