@@ -74,20 +74,39 @@ foreach ($categories as $type) {
 <div class="">
 <section id="middle" class="row">
     
-<?php for( $i =0; $i<= $count-1;$i++){                        
+<?php for( $i =0; $i<= $count-1;$i++){  
+    
+    if($i == 1 or $i ==3 or $i ==4 or $i ==6 or $i ==9 or $i ==11 or $i ==12 or $i ==14){
     ?>
     
-    <div class="item col-lg-3 col-md-6 col-sm-12 " style="background-image:
+    <div class="item col-lg-3 col-md-6 col-sm-12 even" style="background-image:
      url(<?php echo $categories['categories'][$i]['strCategoryThumb'] ?>)">
-        <a href="recipesover.php#catnaam=<?php echo $categories['categories'][$i]['strCategory'] ?>"><div id="title" class="row col-12">
+        <a href="recipesover.php?cat=<?php echo $categories['categories'][$i]['strCategory'] ?>"><div class="row col-12">
          <h2><?php echo $categories['categories'][$i]['strCategory'] ?></h2>
         </div></a>
      </div><?php
+    }
+    else{
+        ?>
+    
+    <div class="item col-lg-3 col-md-6 col-sm-12 oneven" style="background-image:
+     url(<?php echo $categories['categories'][$i]['strCategoryThumb'] ?>)">
+        <a href="recipesover.php?cat=<?php echo $categories['categories'][$i]['strCategory'] ?>"><div class="row col-12">
+         <h2><?php echo $categories['categories'][$i]['strCategory'] ?></h2>
+        </div></a>
+     </div><?php
+     
+    }
     }
     ?>
    
 </section>
 </div>
-<footer>test</footer>
+<footer class="row">
+    <span>Api used : &nbsp 
+    <a href="https://www.themealdb.com/api.php"> The MealDB</a> </span>
+    
+
+</footer>
 </body>
 </html>

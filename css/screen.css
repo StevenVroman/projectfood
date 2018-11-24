@@ -164,6 +164,20 @@ body {
   font-weight: 600;
   height: 100%;
 }
+body footer {
+  height: 50px !important;
+  background-color: #232425;
+}
+body footer span {
+  color: #DB4C40;
+  text-align: center;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+body footer span a {
+  color: #F3EFF5;
+}
 
 div#top {
   max-height: 100%;
@@ -246,39 +260,71 @@ div#top span.navbar-toggler-icon {
   color: #F3EFF5;
 }
 
-body#home {
+body#home,
+body#recipes {
   height: 100%;
 }
-body#home div section#middle {
-  padding: 20px;
+body#home div section#middle,
+body#recipes div section#middle {
+  min-height: 735px;
   height: 90% !important;
   z-index: 300;
   background-image: url("/pics/bgimages.jpg");
 }
-body#home div section#middle div {
-  background-color: rgba(49, 18, 75, 0.8);
-  background-repeat: no-repeat;
-  padding: 30px;
+body#home div section#middle a,
+body#recipes div section#middle a {
+  height: 100%;
   box-sizing: border-box;
-  border: rgba(240, 201, 135, 0.4) 3px solid;
+  text-decoration: none;
+  padding: 5px;
+  text-transform: uppercase;
+}
+body#home div section#middle a div.catover,
+body#recipes div section#middle a div.catover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(49, 18, 75, 0.6);
+  color: #F3EFF5;
+}
+body#home div section#middle a div.catover h3,
+body#recipes div section#middle a div.catover h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: auto;
+}
+body#home div section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
+body#recipes div section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
+  background-color: rgba(49, 18, 75, 0.6) !important;
+}
+body#home div section#middle div.oneven,
+body#recipes div section#middle div.oneven {
+  background-color: rgba(49, 18, 75, 0.8) !important;
+}
+body#home div section#middle div,
+body#recipes div section#middle div {
+  background-repeat: no-repeat;
+  padding: 20px;
+  box-sizing: border-box;
   background-size: 500px;
   z-index: 200;
   height: 400px;
   width: 100%;
   background-position: bottom;
 }
-body#home div section#middle div div {
+body#home div section#middle div div,
+body#recipes div section#middle div div {
   position: absolute;
   height: 75px;
   width: 100%;
-  top: 322px;
+  top: 325px;
   border: none;
   left: 15px;
-  background-color: rgba(60, 21, 59, 0.8);
+  background-color: rgba(60, 21, 59, 0.5);
   display: block;
   justify-content: center;
 }
-body#home div section#middle div div h2 {
+body#home div section#middle div div h2,
+body#recipes div section#middle div div h2 {
   text-align: center !important;
   font-size: 18px;
   font-weight: 700;
@@ -287,7 +333,8 @@ body#home div section#middle div div h2 {
   box-sizing: border-box;
   letter-spacing: 3px;
 }
-body#home div section#middle div:hover {
+body#home div section#middle div:hover,
+body#recipes div section#middle div:hover {
   background-size: 550px;
 }
 
