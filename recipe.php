@@ -79,13 +79,7 @@ foreach ($catover as $type) {
 </div>
 <div class="bg row">
 <section id="middle" class="col-12">
-<?php for( $i =0; $i<= $count-1;$i++){  
-    ?>
-    <a class="row" href=''><div class='catover '>
-    <h3><?php echo $catover['meals'][$i]['strMeal']?></h3>
-    </div></a>
-    <?php
-    }
+<?php 
     ?>  
     
 </section>
