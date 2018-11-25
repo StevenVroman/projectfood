@@ -7,17 +7,14 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
  ?>
 
 <?php
-if(!empty($_GET["cat"]))
+if(!empty($_GET["id"]))
 {
 include_once 'scripts/config.php';
 include_once 'scripts/api.php';
 
-$catnaam = $_GET["cat"]; 
-$catover = CallAPI("GET", $DB."/filter.php?c=".$catnaam); 
-$count = 0;
-foreach ($catover as $type) {
-    $count+= count($type);
-}
+$recipe= $_GET["id"]; 
+$recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe); 
+
 } 
 
 ?>
@@ -79,6 +76,13 @@ foreach ($catover as $type) {
 </div>
 <div class="bg row">
 <section id="middle" class="col-12">
+    <div class="col-4 float-left">
+
+     </div>
+    <div class="col-6 float-right">
+        <h1><?php echo $recipes['meals'][0]['strMeal']?></h1>
+        Category : 
+    </div>
 <?php 
     ?>  
     
