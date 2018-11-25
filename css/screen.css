@@ -264,44 +264,50 @@ body#home,
 body#recipes {
   height: 100%;
 }
-body#home div section#middle,
-body#recipes div section#middle {
-  min-height: 735px;
-  height: 90% !important;
-  z-index: 300;
+body#home div.bg,
+body#recipes div.bg {
   background-image: url("/pics/bgimages.jpg");
+  padding: 0px;
 }
-body#home div section#middle a,
-body#recipes div section#middle a {
+body#home div.bg section#middle,
+body#recipes div.bg section#middle {
+  z-index: 300;
+  min-height: 735px;
+}
+body#home div.bg section#middle a,
+body#recipes div.bg section#middle a {
   height: 100%;
   box-sizing: border-box;
   text-decoration: none;
   padding: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
   text-transform: uppercase;
+  height: 70px;
 }
-body#home div section#middle a div.catover,
-body#recipes div section#middle a div.catover {
+body#home div.bg section#middle a div.catover,
+body#recipes div.bg section#middle a div.catover {
   width: 100%;
   height: 100%;
-  background-color: rgba(49, 18, 75, 0.6);
+  background-color: rgba(73, 0, 18, 0.6);
   color: #F3EFF5;
 }
-body#home div section#middle a div.catover h3,
-body#recipes div section#middle a div.catover h3 {
+body#home div.bg section#middle a div.catover h3,
+body#recipes div.bg section#middle a div.catover h3 {
   font-size: 15px;
-  font-weight: 500;
-  margin: auto;
+  font-weight: 700;
+  padding-left: 50px;
 }
-body#home div section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
-body#recipes div section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
+body#home div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
+body#recipes div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
   background-color: rgba(49, 18, 75, 0.6) !important;
 }
-body#home div section#middle div.oneven,
-body#recipes div section#middle div.oneven {
+body#home div.bg section#middle div.oneven,
+body#recipes div.bg section#middle div.oneven {
   background-color: rgba(49, 18, 75, 0.8) !important;
 }
-body#home div section#middle div,
-body#recipes div section#middle div {
+body#home div.bg section#middle div,
+body#recipes div.bg section#middle div {
   background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
@@ -311,8 +317,8 @@ body#recipes div section#middle div {
   width: 100%;
   background-position: bottom;
 }
-body#home div section#middle div div,
-body#recipes div section#middle div div {
+body#home div.bg section#middle div div,
+body#recipes div.bg section#middle div div {
   position: absolute;
   height: 75px;
   width: 100%;
@@ -323,8 +329,8 @@ body#recipes div section#middle div div {
   display: block;
   justify-content: center;
 }
-body#home div section#middle div div h2,
-body#recipes div section#middle div div h2 {
+body#home div.bg section#middle div div h2,
+body#recipes div.bg section#middle div div h2 {
   text-align: center !important;
   font-size: 18px;
   font-weight: 700;
@@ -333,8 +339,8 @@ body#recipes div section#middle div div h2 {
   box-sizing: border-box;
   letter-spacing: 3px;
 }
-body#home div section#middle div:hover,
-body#recipes div section#middle div:hover {
+body#home div.bg section#middle div:hover,
+body#recipes div.bg section#middle div:hover {
   background-size: 550px;
 }
 

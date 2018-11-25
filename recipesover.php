@@ -55,7 +55,7 @@ foreach ($catover as $type) {
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="home.php">Home</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Lookup Meal</a>
@@ -77,11 +77,11 @@ foreach ($catover as $type) {
         <img src="/pics/logowhite2.png" alt="logo">
     </div>  
 </div>
-<div class="">
-<section id="middle" class="row">
+<div class="bg row">
+<section id="middle" class="col-12">
 <?php for( $i =0; $i<= $count-1;$i++){  
     ?>
-    <a class="col-lg-12 col-md-12 col-sm-12" href=''><div class='catover '>
+    <a class="row" href=''><div class='catover '>
     <h3><?php echo $catover['meals'][$i]['strMeal']?></h3>
     </div></a>
     <?php

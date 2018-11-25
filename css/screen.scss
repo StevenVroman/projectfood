@@ -319,30 +319,34 @@ body#home,
 body#recipes {
     height: 100%;
 
-    div {
+    div.bg {
+        background-image: url("/pics/bgimages.jpg");
+        padding: 0px;
+
         section#middle {
-            min-height: 735px;
-            height: 90% !important;
             z-index: 300;
-            background-image: url("/pics/bgimages.jpg");
+            min-height: 735px;
 
             a {
                 height: 100%;
                 box-sizing: border-box;
                 text-decoration: none;
                 padding: 5px;
+                padding-left: 100px;
+                padding-right: 100px;
                 text-transform: uppercase;
+                height: 70px;
 
                 div.catover {
                     width: 100%;
                     height: 100%;
-                    background-color: rgba($donkerpaars, $alpha: 0.6);
+                    background-color: rgba($pinky, $alpha: 0.6);
                     color: $textcolor;
 
                     h3 {
                         font-size: 15px;
-                        font-weight: 500;
-                        margin: auto;
+                        font-weight: 700;
+                        padding-left: 50px;
                     }
                 }
             }
