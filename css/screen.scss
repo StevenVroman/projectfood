@@ -169,11 +169,27 @@ body#registerpage {
     button.navbar-toggler {
         margin-left: 20px;
     }
+
+    section#middle {
+        width: 103% !important;
+
+        a {
+            padding: 0px !important;
+        }
+    }
 }
 
 @media (max-width: 1325px) {
     div#logo {
         left: 40% !important;
+    }
+
+    section#middle {
+        width: 101.7% !important;
+
+        a {
+            padding: 0px !important;
+        }
     }
 }
 
@@ -320,12 +336,15 @@ body#recipes {
     height: 100%;
 
     div.bg {
+
         background-image: url("/pics/bgimages.jpg");
         padding: 0px;
 
         section#middle {
             z-index: 300;
             min-height: 735px;
+            width: 100.8%;
+            background-color: rgba($anderlecht, $alpha: 0.8);
 
             a {
                 height: 100%;
@@ -337,19 +356,28 @@ body#recipes {
                 text-transform: uppercase;
                 height: 70px;
 
+
                 div.catover {
                     width: 100%;
                     height: 100%;
-                    background-color: rgba($pinky, $alpha: 0.6);
+                    background-color: rgba($pinky, $alpha: 0.8);
                     color: $textcolor;
+
 
                     h3 {
                         font-size: 15px;
                         font-weight: 700;
-                        padding-left: 50px;
+                        padding-left: 30px;
                     }
                 }
+
+                div.catover:hover {
+                    background-color: $anderlecht;
+                }
+
             }
+
+
 
 
             div.item.col-lg-3.col-md-6.col-sm-12.even {

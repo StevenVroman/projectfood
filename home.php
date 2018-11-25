@@ -71,7 +71,7 @@ foreach ($categories as $type) {
         <img src="/pics/logowhite2.png" alt="logo">
     </div>  
 </div>
-<div class="bg col-12">
+<div class="bg row">
 <section id="middle" class="row">
     
 <?php for( $i =0; $i<= $count-1;$i++){  

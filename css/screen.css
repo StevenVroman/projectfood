@@ -152,10 +152,24 @@ body#registerpage div#register .login-form-2 .btnForgetPwd:hover {
   button.navbar-toggler {
     margin-left: 20px;
   }
+
+  section#middle {
+    width: 103% !important;
+  }
+  section#middle a {
+    padding: 0px !important;
+  }
 }
 @media (max-width: 1325px) {
   div#logo {
     left: 40% !important;
+  }
+
+  section#middle {
+    width: 101.7% !important;
+  }
+  section#middle a {
+    padding: 0px !important;
   }
 }
 body {
@@ -273,6 +287,8 @@ body#home div.bg section#middle,
 body#recipes div.bg section#middle {
   z-index: 300;
   min-height: 735px;
+  width: 100.8%;
+  background-color: rgba(60, 21, 59, 0.8);
 }
 body#home div.bg section#middle a,
 body#recipes div.bg section#middle a {
@@ -289,14 +305,18 @@ body#home div.bg section#middle a div.catover,
 body#recipes div.bg section#middle a div.catover {
   width: 100%;
   height: 100%;
-  background-color: rgba(73, 0, 18, 0.6);
+  background-color: rgba(73, 0, 18, 0.8);
   color: #F3EFF5;
 }
 body#home div.bg section#middle a div.catover h3,
 body#recipes div.bg section#middle a div.catover h3 {
   font-size: 15px;
   font-weight: 700;
-  padding-left: 50px;
+  padding-left: 30px;
+}
+body#home div.bg section#middle a div.catover:hover,
+body#recipes div.bg section#middle a div.catover:hover {
+  background-color: #3C153B;
 }
 body#home div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
 body#recipes div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
