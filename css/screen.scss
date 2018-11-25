@@ -344,7 +344,7 @@ body#recipes {
             z-index: 300;
             min-height: 735px;
             width: 100.8%;
-            background-color: rgba($anderlecht, $alpha: 0.8);
+            background-color: rgba($anderlecht, $alpha: 0.7);
 
             a {
                 height: 100%;
@@ -360,7 +360,7 @@ body#recipes {
                 div.catover {
                     width: 100%;
                     height: 100%;
-                    background-color: rgba($pinky, $alpha: 0.8);
+                    background-color: rgba($pinky, $alpha: 0.6);
                     color: $textcolor;
 
 
@@ -372,7 +372,7 @@ body#recipes {
                 }
 
                 div.catover:hover {
-                    background-color: $anderlecht;
+                    background-color: rgba($anderlecht, $alpha: 0.7);
                 }
 
             }

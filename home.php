@@ -37,8 +37,8 @@ foreach ($categories as $type) {
 <div id="top" class="row"> 
             <div id="topbutton" class="col-11">
                 <div class="row float-right">
-                <input type="submit" class="btnregis form-control col-3" value="Profiel" name="Profiel" onclick="window.location.href='register.php'" />
-                <input type="submit" class="btnregis form-control col-3" value="logout" name="logout" onclick="window.location.href='register.php'" />
+                <input type="submit" class="btnregis form-control col-3" value="Profiel" name="Profiel" onclick="window.location.href='profiel.php'" />
+                <input type="submit" class="btnregis form-control col-3" value="logout" name="logout" onclick="window.location.href='logout.php'" />
                 </div>
             </div>
     <div id="navigatie" class="col-12"> 
