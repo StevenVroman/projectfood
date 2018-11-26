@@ -288,7 +288,13 @@ body#recipes div.bg section#middle {
   z-index: 300;
   min-height: 735px;
   width: 100.8%;
+  padding: 0px;
   background-color: rgba(60, 21, 59, 0.7);
+}
+body#home div.bg section#middle div.detailafbeelding,
+body#recipes div.bg section#middle div.detailafbeelding {
+  background-repeat: no-repeat;
+  background-size: 500px;
 }
 body#home div.bg section#middle a,
 body#recipes div.bg section#middle a {
@@ -300,6 +306,7 @@ body#recipes div.bg section#middle a {
   padding-right: 100px;
   text-transform: uppercase;
   height: 70px;
+  width: 100%;
 }
 body#home div.bg section#middle a div.catover,
 body#recipes div.bg section#middle a div.catover {
@@ -312,6 +319,7 @@ body#home div.bg section#middle a div.catover h3,
 body#recipes div.bg section#middle a div.catover h3 {
   font-size: 15px;
   font-weight: 700;
+  padding-top: 20px;
   padding-left: 30px;
 }
 body#home div.bg section#middle a div.catover:hover,
@@ -326,8 +334,8 @@ body#home div.bg section#middle div.oneven,
 body#recipes div.bg section#middle div.oneven {
   background-color: rgba(49, 18, 75, 0.8) !important;
 }
-body#home div.bg section#middle div,
-body#recipes div.bg section#middle div {
+body#home div.bg section#middle div.item,
+body#recipes div.bg section#middle div.item {
   background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
@@ -337,8 +345,8 @@ body#recipes div.bg section#middle div {
   width: 100%;
   background-position: bottom;
 }
-body#home div.bg section#middle div div,
-body#recipes div.bg section#middle div div {
+body#home div.bg section#middle div.item div,
+body#recipes div.bg section#middle div.item div {
   position: absolute;
   height: 75px;
   width: 100%;
@@ -349,18 +357,25 @@ body#recipes div.bg section#middle div div {
   display: block;
   justify-content: center;
 }
-body#home div.bg section#middle div div h2,
-body#recipes div.bg section#middle div div h2 {
+body#home div.bg section#middle div.item div h2,
+body#recipes div.bg section#middle div.item div h2 {
   text-align: center !important;
   font-size: 18px;
+  padding-top: 20px;
   font-weight: 700;
   color: #F3EFF5;
   text-transform: uppercase;
   box-sizing: border-box;
   letter-spacing: 3px;
 }
-body#home div.bg section#middle div:hover,
-body#recipes div.bg section#middle div:hover {
+body#home div.bg section#middle div.detail-af div,
+body#recipes div.bg section#middle div.detail-af div {
+  width: 100%;
+  padding: 0px;
+  height: 500px;
+}
+body#home div.bg section#middle div.item:hover,
+body#recipes div.bg section#middle div.item:hover {
   background-size: 550px;
 }
 

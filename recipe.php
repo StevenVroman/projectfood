@@ -76,8 +76,10 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 </div>
 <div class="bg row">
 <section id="middle" class="col-12">
-    <div class="col-4 float-left">
+    <div class="col-4 float-left detail-af">
+        <div class="row" style="background-image:url(<?php echo $recipes['meals'][0]['strMealThumb']?>)">>
 
+        </div>
      </div>
     <div class="col-6 float-right">
         <h1><?php echo $recipes['meals'][0]['strMeal']?></h1>

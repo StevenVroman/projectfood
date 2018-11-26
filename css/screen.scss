@@ -344,7 +344,13 @@ body#recipes {
             z-index: 300;
             min-height: 735px;
             width: 100.8%;
+            padding: 0px;
             background-color: rgba($anderlecht, $alpha: 0.7);
+
+            div.detailafbeelding {
+                background-repeat: no-repeat;
+                background-size: 500px;
+            }
 
             a {
                 height: 100%;
@@ -355,6 +361,7 @@ body#recipes {
                 padding-right: 100px;
                 text-transform: uppercase;
                 height: 70px;
+                width: 100%;
 
 
                 div.catover {
@@ -367,6 +374,7 @@ body#recipes {
                     h3 {
                         font-size: 15px;
                         font-weight: 700;
+                        padding-top: 20px;
                         padding-left: 30px;
                     }
                 }
@@ -388,7 +396,7 @@ body#recipes {
                 background-color: rgba($donkerpaars, $alpha: 0.8) !important;
             }
 
-            div {
+            div.item {
 
                 background-repeat: no-repeat;
                 padding: 20px;
@@ -415,7 +423,7 @@ body#recipes {
                     h2 {
                         text-align: center !important;
                         font-size: 18px;
-
+                        padding-top: 20px;
                         font-weight: 700;
                         color: $textcolor;
                         text-transform: uppercase;
@@ -425,7 +433,16 @@ body#recipes {
                 }
             }
 
-            div:hover {
+            div.detail-af {
+                div {
+                    width: 100%;
+                    padding: 0px;
+                    height: 500px;
+                }
+
+            }
+
+            div.item:hover {
                 background-size: 550px;
             }
         }
