@@ -142,6 +142,19 @@ body#registerpage {
 }
 
 @media (max-width: 987px) {
+    div.detail-af {
+        div {
+            width: 100%;
+            padding: 0px;
+            height: 500px;
+            background-size: 987px !important;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+
+        padding-bottom: 40px !important;
+    }
+
     ul {
         li {
             margin: 0px;
@@ -332,7 +345,8 @@ div#top {
 }
 
 body#home,
-body#recipes {
+body#recipes,
+body#recipe {
     height: 100%;
 
     div.bg {
@@ -434,13 +448,38 @@ body#recipes {
             }
 
             div.detail-af {
+                padding: 0px;
+
                 div {
+
                     width: 100%;
                     padding: 0px;
                     height: 500px;
+                    background-size: auto;
+                    background-position: left;
+                    margin: 0px;
                 }
 
+
+
             }
+
+            div.info {
+                color: $textcolor;
+                padding: 40px;
+
+                h1 {
+                    font-weight: 700;
+                }
+
+                a.youtube {
+                    font-size: 40px;
+                    color: $rood;
+                    padding: 0px;
+                }
+            }
+
+
 
             div.item:hover {
                 background-size: 550px;

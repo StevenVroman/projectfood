@@ -35,8 +35,10 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/screen.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 </head>
-<body id="recipes" class="container-fluid">
+<body id="recipe" class="container-fluid">
 <div id="top" class="row"> 
             <div id="topbutton" class="col-11">
                 <div class="row float-right">
@@ -76,17 +78,20 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 </div>
 <div class="bg row">
 <section id="middle" class="col-12">
-    <div class="col-4 float-left detail-af">
-        <div class="row" style="background-image:url(<?php echo $recipes['meals'][0]['strMealThumb']?>)">>
+    <div class="col-lg-4 col-md-12 col-sm-12  float-left detail-af">
+        <div class="row" style="background-image:url(<?php echo $recipes['meals'][0]['strMealThumb']?>)">
 
         </div>
      </div>
-    <div class="col-6 float-right">
+    <div class="col-lg-8 col-md-12 col-sm-12 float-right info">
         <h1><?php echo $recipes['meals'][0]['strMeal']?></h1>
+        <a class="youtube" href="<?php echo $recipes['meals'][0]['strYoutube']?>"><i class="fab fa-youtube"></i></a>
+        <br/>
         <span> Area : <?php echo $recipes['meals'][0]['strArea']?> </span>
         <p> Instructions : <?php echo $recipes['meals'][0]['strInstructions']?> </p>
         <span> Tags : <?php echo $recipes['meals'][0]['strTags']?> </span>
-        <span> Youtube : <?php echo $recipes['meals'][0]['strYoutube']?> </span>
+        <br/>
+        
     </div>
 <?php 
     ?>  

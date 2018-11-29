@@ -130,6 +130,18 @@ body#registerpage div#register .login-form-2 .btnForgetPwd:hover {
 }
 
 @media (max-width: 987px) {
+  div.detail-af {
+    padding-bottom: 40px !important;
+  }
+  div.detail-af div {
+    width: 100%;
+    padding: 0px;
+    height: 500px;
+    background-size: 987px !important;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
   ul li {
     margin: 0px;
     padding: 0px;
@@ -275,16 +287,19 @@ div#top span.navbar-toggler-icon {
 }
 
 body#home,
-body#recipes {
+body#recipes,
+body#recipe {
   height: 100%;
 }
 body#home div.bg,
-body#recipes div.bg {
+body#recipes div.bg,
+body#recipe div.bg {
   background-image: url("/pics/bgimages.jpg");
   padding: 0px;
 }
 body#home div.bg section#middle,
-body#recipes div.bg section#middle {
+body#recipes div.bg section#middle,
+body#recipe div.bg section#middle {
   z-index: 300;
   min-height: 735px;
   width: 100.8%;
@@ -292,12 +307,14 @@ body#recipes div.bg section#middle {
   background-color: rgba(60, 21, 59, 0.7);
 }
 body#home div.bg section#middle div.detailafbeelding,
-body#recipes div.bg section#middle div.detailafbeelding {
+body#recipes div.bg section#middle div.detailafbeelding,
+body#recipe div.bg section#middle div.detailafbeelding {
   background-repeat: no-repeat;
   background-size: 500px;
 }
 body#home div.bg section#middle a,
-body#recipes div.bg section#middle a {
+body#recipes div.bg section#middle a,
+body#recipe div.bg section#middle a {
   height: 100%;
   box-sizing: border-box;
   text-decoration: none;
@@ -309,33 +326,39 @@ body#recipes div.bg section#middle a {
   width: 100%;
 }
 body#home div.bg section#middle a div.catover,
-body#recipes div.bg section#middle a div.catover {
+body#recipes div.bg section#middle a div.catover,
+body#recipe div.bg section#middle a div.catover {
   width: 100%;
   height: 100%;
   background-color: rgba(73, 0, 18, 0.6);
   color: #F3EFF5;
 }
 body#home div.bg section#middle a div.catover h3,
-body#recipes div.bg section#middle a div.catover h3 {
+body#recipes div.bg section#middle a div.catover h3,
+body#recipe div.bg section#middle a div.catover h3 {
   font-size: 15px;
   font-weight: 700;
   padding-top: 20px;
   padding-left: 30px;
 }
 body#home div.bg section#middle a div.catover:hover,
-body#recipes div.bg section#middle a div.catover:hover {
+body#recipes div.bg section#middle a div.catover:hover,
+body#recipe div.bg section#middle a div.catover:hover {
   background-color: rgba(60, 21, 59, 0.7);
 }
 body#home div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
-body#recipes div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
+body#recipes div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
+body#recipe div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
   background-color: rgba(49, 18, 75, 0.6) !important;
 }
 body#home div.bg section#middle div.oneven,
-body#recipes div.bg section#middle div.oneven {
+body#recipes div.bg section#middle div.oneven,
+body#recipe div.bg section#middle div.oneven {
   background-color: rgba(49, 18, 75, 0.8) !important;
 }
 body#home div.bg section#middle div.item,
-body#recipes div.bg section#middle div.item {
+body#recipes div.bg section#middle div.item,
+body#recipe div.bg section#middle div.item {
   background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
@@ -346,7 +369,8 @@ body#recipes div.bg section#middle div.item {
   background-position: bottom;
 }
 body#home div.bg section#middle div.item div,
-body#recipes div.bg section#middle div.item div {
+body#recipes div.bg section#middle div.item div,
+body#recipe div.bg section#middle div.item div {
   position: absolute;
   height: 75px;
   width: 100%;
@@ -358,7 +382,8 @@ body#recipes div.bg section#middle div.item div {
   justify-content: center;
 }
 body#home div.bg section#middle div.item div h2,
-body#recipes div.bg section#middle div.item div h2 {
+body#recipes div.bg section#middle div.item div h2,
+body#recipe div.bg section#middle div.item div h2 {
   text-align: center !important;
   font-size: 18px;
   padding-top: 20px;
@@ -368,14 +393,42 @@ body#recipes div.bg section#middle div.item div h2 {
   box-sizing: border-box;
   letter-spacing: 3px;
 }
+body#home div.bg section#middle div.detail-af,
+body#recipes div.bg section#middle div.detail-af,
+body#recipe div.bg section#middle div.detail-af {
+  padding: 0px;
+}
 body#home div.bg section#middle div.detail-af div,
-body#recipes div.bg section#middle div.detail-af div {
+body#recipes div.bg section#middle div.detail-af div,
+body#recipe div.bg section#middle div.detail-af div {
   width: 100%;
   padding: 0px;
   height: 500px;
+  background-size: auto;
+  background-position: left;
+  margin: 0px;
+}
+body#home div.bg section#middle div.info,
+body#recipes div.bg section#middle div.info,
+body#recipe div.bg section#middle div.info {
+  color: #F3EFF5;
+  padding: 40px;
+}
+body#home div.bg section#middle div.info h1,
+body#recipes div.bg section#middle div.info h1,
+body#recipe div.bg section#middle div.info h1 {
+  font-weight: 700;
+}
+body#home div.bg section#middle div.info a.youtube,
+body#recipes div.bg section#middle div.info a.youtube,
+body#recipe div.bg section#middle div.info a.youtube {
+  font-size: 40px;
+  color: #DB4C40;
+  padding: 0px;
 }
 body#home div.bg section#middle div.item:hover,
-body#recipes div.bg section#middle div.item:hover {
+body#recipes div.bg section#middle div.item:hover,
+body#recipe div.bg section#middle div.item:hover {
   background-size: 550px;
 }
 
