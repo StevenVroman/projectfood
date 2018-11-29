@@ -83,11 +83,13 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
      </div>
     <div class="col-6 float-right">
         <h1><?php echo $recipes['meals'][0]['strMeal']?></h1>
-        Category : 
+        <span> Area : <?php echo $recipes['meals'][0]['strArea']?> </span>
+        <p> Instructions : <?php echo $recipes['meals'][0]['strInstructions']?> </p>
+        <span> Tags : <?php echo $recipes['meals'][0]['strTags']?> </span>
+        <span> Youtube : <?php echo $recipes['meals'][0]['strYoutube']?> </span>
     </div>
 <?php 
     ?>  
-    
 </section>
 </div>
 <footer class="row">
