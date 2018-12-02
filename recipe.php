@@ -98,6 +98,13 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
         <br />
         
     </div>
+    <div id="ingredienten" class="col-12">
+    </div>
+</div>
+
+ 
+</div>
+    </div>
 <?php 
     ?>  
 </section>
@@ -109,4 +116,5 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 
 </footer>
 </body>
+<script src="scripts/slider.js"></script>     
 </html>

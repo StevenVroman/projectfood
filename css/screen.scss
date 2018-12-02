@@ -362,6 +362,8 @@ body#recipe {
             padding: 0px;
             background-color: rgba($anderlecht, $alpha: 0.7);
 
+            div#ingredienten {}
+
             div.detailafbeelding {
                 background-repeat: no-repeat;
                 background-size: 500px;
@@ -399,9 +401,6 @@ body#recipe {
                 }
 
             }
-
-
-
 
             div.item.col-lg-3.col-md-6.col-sm-12.even {
                 background-color: rgba($donkerpaars, $alpha: 0.6) !important;
