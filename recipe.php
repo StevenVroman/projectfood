@@ -79,8 +79,10 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 <div class="bg row">
 <section id="middle" class="col-12">
     <div class="col-lg-4 col-md-12 col-sm-12  float-left detail-af">
-        <?php if(!$recipes['meals'][0]['strYoutube']==""){ ?>
-        <a class="youtube" href="<?php echo $recipes['meals'][0]['strYoutube']?>"><i class="fab fa-youtube"></i></a>
+        <?php if(!$recipes['meals'][0]['strYoutube']==""){ 
+              $url = $recipes['meals'][0]['strYoutube'];
+            ?>
+        <a class="youtube" onclick='vidon("<?php echo $url ?>")'><i class="fab fa-youtube"></i></a>
         <?php } ?>
         <div class="row" style="background-image:url(<?php echo $recipes['meals'][0]['strMealThumb']?>)">
         </div>
@@ -116,5 +118,5 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 
 </footer>
 </body>
-<script src="scripts/slider.js"></script>     
+<script src="scripts/youtube.js"></script>     
 </html>
