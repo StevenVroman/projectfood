@@ -36,7 +36,7 @@ body {
         width: 100%;
         background-color: $donkerpaars;
         opacity: 0.8;
-        border: 3px $vanillegeelachtig solid;
+        border: 2px $vanillegeelachtig solid;
         border-radius: 1.5rem;
         text-transform: uppercase;
         color: $textcolor;
@@ -220,6 +220,7 @@ body {
 
 
         span {
+            padding-top: 10px;
             color: $rood;
             text-align: center;
             margin: auto;
@@ -460,11 +461,33 @@ body#recipe {
                     margin: 0px;
                 }
 
+                a.youtube {
+                    visibility: hidden;
+                    margin: auto;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 70px;
+                    color: $rood;
+                    padding: 0px;
+                    position: absolute;
+                    background-color: rgba($textcolor, $alpha: 0.6);
 
+                    i {
+                        position: absolute;
+                        top: 42.5%;
+                        left: 42.5%;
+                    }
+                }
+            }
 
+            div.detail-af:hover {
+                a.youtube {
+                    visibility: visible;
+                }
             }
 
             div.info {
+                text-transform: none;
                 color: $textcolor;
                 padding: 40px;
 
@@ -472,11 +495,7 @@ body#recipe {
                     font-weight: 700;
                 }
 
-                a.youtube {
-                    font-size: 40px;
-                    color: $rood;
-                    padding: 0px;
-                }
+
             }
 
 

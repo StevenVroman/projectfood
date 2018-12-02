@@ -20,7 +20,7 @@ body .btnregis {
   width: 100%;
   background-color: #31124b;
   opacity: 0.8;
-  border: 3px #F0C987 solid;
+  border: 2px #F0C987 solid;
   border-radius: 1.5rem;
   text-transform: uppercase;
   color: #F3EFF5;
@@ -195,6 +195,7 @@ body footer {
   background-color: #232425;
 }
 body footer span {
+  padding-top: 10px;
   color: #DB4C40;
   text-align: center;
   margin: auto;
@@ -408,9 +409,35 @@ body#recipe div.bg section#middle div.detail-af div {
   background-position: left;
   margin: 0px;
 }
+body#home div.bg section#middle div.detail-af a.youtube,
+body#recipes div.bg section#middle div.detail-af a.youtube,
+body#recipe div.bg section#middle div.detail-af a.youtube {
+  visibility: hidden;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  font-size: 70px;
+  color: #DB4C40;
+  padding: 0px;
+  position: absolute;
+  background-color: rgba(243, 239, 245, 0.6);
+}
+body#home div.bg section#middle div.detail-af a.youtube i,
+body#recipes div.bg section#middle div.detail-af a.youtube i,
+body#recipe div.bg section#middle div.detail-af a.youtube i {
+  position: absolute;
+  top: 42.5%;
+  left: 42.5%;
+}
+body#home div.bg section#middle div.detail-af:hover a.youtube,
+body#recipes div.bg section#middle div.detail-af:hover a.youtube,
+body#recipe div.bg section#middle div.detail-af:hover a.youtube {
+  visibility: visible;
+}
 body#home div.bg section#middle div.info,
 body#recipes div.bg section#middle div.info,
 body#recipe div.bg section#middle div.info {
+  text-transform: none;
   color: #F3EFF5;
   padding: 40px;
 }
@@ -418,13 +445,6 @@ body#home div.bg section#middle div.info h1,
 body#recipes div.bg section#middle div.info h1,
 body#recipe div.bg section#middle div.info h1 {
   font-weight: 700;
-}
-body#home div.bg section#middle div.info a.youtube,
-body#recipes div.bg section#middle div.info a.youtube,
-body#recipe div.bg section#middle div.info a.youtube {
-  font-size: 40px;
-  color: #DB4C40;
-  padding: 0px;
 }
 body#home div.bg section#middle div.item:hover,
 body#recipes div.bg section#middle div.item:hover,

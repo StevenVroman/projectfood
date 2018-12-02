@@ -79,18 +79,23 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 <div class="bg row">
 <section id="middle" class="col-12">
     <div class="col-lg-4 col-md-12 col-sm-12  float-left detail-af">
+        <?php if(!$recipes['meals'][0]['strYoutube']==""){ ?>
+        <a class="youtube" href="<?php echo $recipes['meals'][0]['strYoutube']?>"><i class="fab fa-youtube"></i></a>
+        <?php } ?>
         <div class="row" style="background-image:url(<?php echo $recipes['meals'][0]['strMealThumb']?>)">
-
         </div>
      </div>
     <div class="col-lg-8 col-md-12 col-sm-12 float-right info">
         <h1><?php echo $recipes['meals'][0]['strMeal']?></h1>
-        <a class="youtube" href="<?php echo $recipes['meals'][0]['strYoutube']?>"><i class="fab fa-youtube"></i></a>
-        <br/>
-        <span> Area : <?php echo $recipes['meals'][0]['strArea']?> </span>
+        
+        <br />
+        <span> Area : <?php echo $recipes['meals'][0]['strArea']?> </span> 
+        <br /><br />
         <p> Instructions : <?php echo $recipes['meals'][0]['strInstructions']?> </p>
+        <?php if(!$recipes['meals'][0]['strTags']==""){ ?>
         <span> Tags : <?php echo $recipes['meals'][0]['strTags']?> </span>
-        <br/>
+        <?php } ?>
+        <br />
         
     </div>
 <?php 
