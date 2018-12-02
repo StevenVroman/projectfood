@@ -362,7 +362,9 @@ body#recipe {
             padding: 0px;
             background-color: rgba($anderlecht, $alpha: 0.7);
 
-            div#ingredienten {}
+            div#ingredienten {
+                color: #3C153B;
+            }
 
             div.detailafbeelding {
                 background-repeat: no-repeat;
