@@ -103,9 +103,6 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
     <div id="ingredienten" class="col-12">
     
     </div>
-
-<?php 
-    ?>  
 </section>
 </div>
 <footer class="row">
@@ -115,5 +112,8 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 
 </footer>
 </body>
-<script src="scripts/youtube.js"></script>     
+<script src="scripts/youtube.js">
+$('#blogCarousel').carousel({
+				interval: 5000
+		});</script>     
 </html>

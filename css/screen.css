@@ -337,15 +337,68 @@ body#recipe div.bg section#middle {
   padding: 0px;
   background-color: rgba(60, 21, 59, 0.7);
 }
-body#home div.bg section#middle div#ingredienten .carousel-control,
-body#recipes div.bg section#middle div#ingredienten .carousel-control,
-body#recipe div.bg section#middle div#ingredienten .carousel-control {
-  padding-top: 10%;
-  width: 5%;
+body#home div.bg section#middle div#ingredienten,
+body#recipes div.bg section#middle div#ingredienten,
+body#recipe div.bg section#middle div#ingredienten {
+  float: left;
+  padding: 0px;
+  box-sizing: border-box;
+  /* The colour of the indicators */
+}
+body#home div.bg section#middle div#ingredienten div.row,
+body#recipes div.bg section#middle div#ingredienten div.row,
+body#recipe div.bg section#middle div#ingredienten div.row {
+  margin: 0px;
+}
+body#home div.bg section#middle div#ingredienten div.row div.col-md-12,
+body#recipes div.bg section#middle div#ingredienten div.row div.col-md-12,
+body#recipe div.bg section#middle div#ingredienten div.row div.col-md-12 {
+  padding: 0px;
+}
+body#home div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row div,
+body#recipes div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row div,
+body#recipe div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row div {
+  height: 250px;
+  width: 100%;
+  padding: 0px;
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: top;
+}
+body#home div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row .even,
+body#recipes div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row .even,
+body#recipe div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row .even {
+  background-color: #31124b;
+}
+body#home div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row .oneven,
+body#recipes div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row .oneven,
+body#recipe div.bg section#middle div#ingredienten div.row div.col-md-12 div.carousel-item div.row .oneven {
+  background-color: #3C153B;
+}
+body#home div.bg section#middle div#ingredienten .blog .carousel-indicators,
+body#recipes div.bg section#middle div#ingredienten .blog .carousel-indicators,
+body#recipe div.bg section#middle div#ingredienten .blog .carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: 250px;
+}
+body#home div.bg section#middle div#ingredienten .blog .carousel-indicators li,
+body#recipes div.bg section#middle div#ingredienten .blog .carousel-indicators li,
+body#recipe div.bg section#middle div#ingredienten .blog .carousel-indicators li {
+  background: #a3a3a3;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+body#home div.bg section#middle div#ingredienten .blog .carousel-indicators .active,
+body#recipes div.bg section#middle div#ingredienten .blog .carousel-indicators .active,
+body#recipe div.bg section#middle div#ingredienten .blog .carousel-indicators .active {
+  background: #707070;
 }
 body#home div.bg section#middle div.detailafbeelding,
 body#recipes div.bg section#middle div.detailafbeelding,
 body#recipe div.bg section#middle div.detailafbeelding {
+  background-position: top;
   background-repeat: no-repeat;
   background-size: 500px;
 }
@@ -475,7 +528,7 @@ body#recipes div.bg section#middle div.info,
 body#recipe div.bg section#middle div.info {
   text-transform: none;
   color: #F3EFF5;
-  padding: 40px;
+  padding: 20px;
 }
 body#home div.bg section#middle div.info h1,
 body#recipes div.bg section#middle div.info h1,

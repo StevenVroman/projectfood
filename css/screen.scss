@@ -395,13 +395,63 @@ body#recipe {
             background-color: rgba($anderlecht, $alpha: 0.7);
 
             div#ingredienten {
-                .carousel-control {
-                    padding-top: 10%;
-                    width: 5%;
+                float: left;
+                padding: 0px;
+                box-sizing: border-box;
+
+                div.row {
+                    margin: 0px;
+
+                    div.col-md-12 {
+                        padding: 0px;
+
+                        div.carousel-item {
+                            div.row {
+                                div {
+                                    height: 250px;
+                                    width: 100%;
+                                    padding: 0px;
+                                    background-repeat: no-repeat;
+                                    background-size: 250px;
+                                    background-position: top;
+                                }
+
+                                .even {
+                                    background-color: $donkerpaars;
+                                }
+
+                                .oneven {
+                                    background-color: $anderlecht;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
+                .blog .carousel-indicators {
+                    left: 0;
+                    top: auto;
+                    bottom: 250px;
+
+                }
+
+                /* The colour of the indicators */
+                .blog .carousel-indicators li {
+                    background: #a3a3a3;
+                    border-radius: 50%;
+                    width: 8px;
+                    height: 8px;
+                }
+
+                .blog .carousel-indicators .active {
+                    background: #707070;
                 }
             }
 
             div.detailafbeelding {
+                background-position: top;
                 background-repeat: no-repeat;
                 background-size: 500px;
             }
@@ -525,7 +575,7 @@ body#recipe {
             div.info {
                 text-transform: none;
                 color: $textcolor;
-                padding: 40px;
+                padding: 20px;
 
                 h1 {
                     font-weight: 700;
