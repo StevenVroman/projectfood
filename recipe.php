@@ -101,12 +101,9 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
         
     </div>
     <div id="ingredienten" class="col-12">
+    
     </div>
-</div>
 
- 
-</div>
-    </div>
 <?php 
     ?>  
 </section>

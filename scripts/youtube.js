@@ -18,3 +18,14 @@ function vidoff() {
 function createYouTubeEmbedLink(link) {
     return link.replace("https:\/\/www.youtube.com\/watch?v=", "http:\/\/www.youtube.com\/embed\/");
 }
+$(document).ready(function () {
+    $('#myCarousel').carousel({
+        interval: 10000
+    })
+
+    $('#myCarousel').on('slid.bs.carousel', function () {
+        //alert("slid");
+    });
+
+
+});

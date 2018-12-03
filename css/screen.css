@@ -302,12 +302,9 @@ div#overlay {
   overflow: hidden;
 }
 div#overlay i {
-  padding: 20px;
-  border-radius: 40px;
   font-size: 80px;
   color: #F3EFF5;
   position: absolute;
-  background-color: #3C153B;
   right: 20px;
   z-index: 100002;
 }
@@ -340,10 +337,11 @@ body#recipe div.bg section#middle {
   padding: 0px;
   background-color: rgba(60, 21, 59, 0.7);
 }
-body#home div.bg section#middle div#ingredienten,
-body#recipes div.bg section#middle div#ingredienten,
-body#recipe div.bg section#middle div#ingredienten {
-  color: #3C153B;
+body#home div.bg section#middle div#ingredienten .carousel-control,
+body#recipes div.bg section#middle div#ingredienten .carousel-control,
+body#recipe div.bg section#middle div#ingredienten .carousel-control {
+  padding-top: 10%;
+  width: 5%;
 }
 body#home div.bg section#middle div.detailafbeelding,
 body#recipes div.bg section#middle div.detailafbeelding,
@@ -465,7 +463,7 @@ body#recipes div.bg section#middle div.detail-af a.youtube i,
 body#recipe div.bg section#middle div.detail-af a.youtube i {
   position: absolute;
   top: 42.5%;
-  left: 42.5%;
+  left: 44.5%;
 }
 body#home div.bg section#middle div.detail-af:hover a.youtube,
 body#recipes div.bg section#middle div.detail-af:hover a.youtube,
