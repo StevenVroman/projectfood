@@ -6,14 +6,20 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
 }
  ?>
 
-<?php include_once 'scripts/config.php';
+<?php
+if(!empty($_GET["cat"]))
+{
+include_once 'scripts/config.php';
 include_once 'scripts/api.php';
-$categories = CallAPI("GET", $DB."/categories.php"); 
 
+$catnaam = $_GET["cat"]; 
+$catover = CallAPI("GET", $DB."/filter.php?c=".$catnaam); 
 $count = 0;
-foreach ($categories as $type) {
+foreach ($catover as $type) {
     $count+= count($type);
 }
+} 
+
 ?>
 
 
@@ -33,7 +39,7 @@ foreach ($categories as $type) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
-<body id="home" class="container-fluid">
+<body id="search" class="container-fluid">
 <div id="top" class="row"> 
             <div id="topbutton" class="col-11">
                 <div class="row float-right">
@@ -49,10 +55,10 @@ foreach ($categories as $type) {
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="home.php">Home</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="search.php">Lookup Meal</a>
+                    <a class="nav-link active" href="#">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Latest Added</a>
@@ -72,34 +78,25 @@ foreach ($categories as $type) {
     </div>  
 </div>
 <div class="bg row">
-<section id="middle" class="row">
-    
-<?php for( $i =0; $i<= $count-1;$i++){  
-    
-    if($i == 1 or $i ==3 or $i ==4 or $i ==6 or $i ==9 or $i ==11 or $i ==12 or $i ==14){
-    ?>
-    
-    <div class="item col-lg-3 col-md-6 col-sm-12 even" style="background-image:
-     url(<?php echo $categories['categories'][$i]['strCategoryThumb'] ?>)">
-        <a href="recipesover.php?cat=<?php echo $categories['categories'][$i]['strCategory'] ?>"><div class="row col-12">
-         <h2><?php echo $categories['categories'][$i]['strCategory'] ?></h2>
-        </div></a>
-     </div><?php
-    }
-    else{
-        ?>
-    
-    <div class="item col-lg-3 col-md-6 col-sm-12 oneven" style="background-image:
-     url(<?php echo $categories['categories'][$i]['strCategoryThumb'] ?>)">
-        <a href="recipesover.php?cat=<?php echo $categories['categories'][$i]['strCategory'] ?>"><div class="row col-12">
-         <h2><?php echo $categories['categories'][$i]['strCategory'] ?></h2>
-        </div></a>
-     </div><?php
-     
-    }
-    }
-    ?>
-   
+<section id="middle" class="col-12">
+    <div id="search" class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="">
+                                <div class="card-body row no-gutters align-items-center">
+
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="search your favorite">
+                                    </div>
+
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+    </div>
 </section>
 </div>
 <footer class="row">

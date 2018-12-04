@@ -379,7 +379,8 @@ div#overlay {
 
 body#home,
 body#recipes,
-body#recipe {
+body#recipe,
+body#search {
     height: 100%;
 
     div.bg {
@@ -394,66 +395,68 @@ body#recipe {
             padding: 0px;
             background-color: rgba($anderlecht, $alpha: 0.7);
 
+            div#search {
+                width: 99% !important;
+                margin: 0px;
+                font-family: 'Montserrat',
+                    sans-serif !important;
+
+                button {
+                    background-color: $anderlecht;
+                    border-color: $donkerpaars;
+
+                }
+            }
+
             div#ingredienten {
+                background-color: rgba($donkerpaars, $alpha: 0.6);
                 float: left;
                 padding: 0px;
                 box-sizing: border-box;
+                margin: 0px;
+                min-height: 250px;
 
-                div.row {
+                ul {
+                    padding: 0px;
                     margin: 0px;
 
-                    div.col-md-12 {
-                        padding: 0px;
+                    li {
+                        color: $textcolor;
+                        text-decoration: none;
+                        list-style-type: none;
+                        padding-top: 10px;
+                        text-align: center;
+                        height: 80px !important;
+                        box-sizing: border-box;
 
-                        div.carousel-item {
-                            div.row {
-                                div {
-                                    height: 250px;
-                                    width: 100%;
-                                    padding: 0px;
-                                    background-repeat: no-repeat;
-                                    background-size: 250px;
-                                    background-position: top;
-                                }
+                        span {
+                            padding: 0px;
+                            margin: 0px;
+                            font-size: 0.8rem !important;
 
-                                .even {
-                                    background-color: $donkerpaars;
-                                }
-
-                                .oneven {
-                                    background-color: $anderlecht;
-                                }
+                            h4 {
+                                font-size: 1.4rem;
+                                font-weight: 900;
                             }
                         }
+
                     }
 
+                    li:hover {
+                        background-color: rgba($anderlecht, $alpha: 0.6);
+                    }
                 }
 
-
-                .blog .carousel-indicators {
-                    left: 0;
-                    top: auto;
-                    bottom: 250px;
-
-                }
-
-                /* The colour of the indicators */
-                .blog .carousel-indicators li {
-                    background: #a3a3a3;
-                    border-radius: 50%;
-                    width: 8px;
-                    height: 8px;
-                }
-
-                .blog .carousel-indicators .active {
-                    background: #707070;
-                }
             }
 
             div.detailafbeelding {
                 background-position: top;
                 background-repeat: no-repeat;
-                background-size: 500px;
+                background-size: 600px;
+
+                div.row {
+                    height: 100%;
+                }
             }
 
             a {
@@ -541,7 +544,9 @@ body#recipe {
 
                     width: 100%;
                     padding: 0px;
-                    height: 500px;
+                    min-height: 500px;
+                    height: 700px;
+                    max-height: 700px;
                     background-size: auto;
                     background-position: left;
                     margin: 0px;

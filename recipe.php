@@ -57,7 +57,7 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
                     <a class="nav-link active" href="home.php">Home</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Lookup Meal</a>
+                    <a class="nav-link" href="search.php">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Latest Added</a>
@@ -93,7 +93,7 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
         <br />
         <span> Area : <?php echo $recipes['meals'][0]['strArea']?> </span> 
         <br /><br />
-        <p> Instructions : <?php echo $recipes['meals'][0]['strInstructions']?> </p>
+        <p> Instructions : <?php echo $recipes['meals'][0]['strInstructions'];?> </p>
         <?php if(!$recipes['meals'][0]['strTags']==""){ ?>
         <span> Tags : <?php echo $recipes['meals'][0]['strTags']?> </span>
         <?php } ?>
@@ -101,7 +101,23 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
         
     </div>
     <div id="ingredienten" class="col-12">
-    
+    <?php
+    $indexin = 1;
+    $countinged = 0;
+    while($recipes['meals'][0]['strIngredient'.$indexin.''] !=""){
+        $indexin +=1;
+        $countinged +=1;
+    }
+    echo ("<ul class='row'>");
+    for($inti = 0 ; $inti<$countinged; $inti++){
+            
+            echo("<li class='col-lg-3 col-md-6 col-sm-12'>");
+            echo("<span class='col-12 text-middle '><h4>" . $recipes['meals'][0]['strIngredient'.($inti+1).''] . "</h4></span>");
+            echo("<span class='col-12 text-middle '>  ". $recipes['meals'][0]['strMeasure'.($inti+1).''] ." </span>");
+            echo("</li>");
+    }
+    echo ("</ul>");
+    ?>  
     </div>
 </section>
 </div>
