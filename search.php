@@ -1,24 +1,16 @@
 <?php
 $cookie_name = "hungry";
-
+$result = false;
 if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
     header("location: login.php");
 }
  ?>
 
 <?php
-if(!empty($_GET["cat"]))
-{
-include_once 'scripts/config.php';
-include_once 'scripts/api.php';
-
-$catnaam = $_GET["cat"]; 
-$catover = CallAPI("GET", $DB."/filter.php?c=".$catnaam); 
-$count = 0;
-foreach ($catover as $type) {
-    $count+= count($type);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $searchresult=$_POST['search'];
+    $result=true;
 }
-} 
 
 ?>
 
@@ -85,7 +77,7 @@ foreach ($catover as $type) {
                                 <div class="card-body row no-gutters align-items-center">
 
                                     <div class="col">
-                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="search your favorite">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" name="search" id="search" placeholder="search your favorite">
                                     </div>
 
                                     <div class="col-auto">
@@ -97,6 +89,10 @@ foreach ($catover as $type) {
 
                     </div>
     </div>
+    <div id="result">
+    
+    
+     </div>
 </section>
 </div>
 <footer class="row">
