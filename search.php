@@ -107,8 +107,8 @@ else{
             /*toon resultaten zoekopdracht */
             for( $i =0; $i<= $count-1;$i++){  
                 ?>
-                <a class="row" href='recipe.php?id=<?php echo $catover['meals'][$i]['idMeal']?>'><div class='catover '>
-                <h3><?php echo $catover['meals'][$i]['strMeal']?></h3>
+                <a class="row" href='recipe.php?id=<?php echo $catfound['meals'][$i]['idMeal']?>'><div class='catover '>
+                <h3><?php echo $catfound['meals'][$i]['strMeal']?></h3>
                 </div></a>
                 <?php
                 }
