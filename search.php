@@ -7,9 +7,21 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
  ?>
 
 <?php
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $searchresult=$_POST['search'];
     $result=true;
+    $catfound = CallAPI("GET", $DB."/search.php?s=".$searchresult); 
+    $count = 0;
+    foreach ($found as $type) {
+    $count+= count($type);
+}
+} 
+}
+else{
+    $result=false;
+    
 }
 
 ?>
@@ -90,7 +102,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
     </div>
     <div id="result">
-    
+        <?php
+        if($result == true){
+            /*toon resultaten zoekopdracht */
+            for( $i =0; $i<= $count-1;$i++){  
+                ?>
+                <a class="row" href='recipe.php?id=<?php echo $catover['meals'][$i]['idMeal']?>'><div class='catover '>
+                <h3><?php echo $catover['meals'][$i]['strMeal']?></h3>
+                </div></a>
+                <?php
+                }
+        }
+        else{
+            echo("<h3> No result Found</h3>")
+        }
+        ?>
     
      </div>
 </section>
