@@ -9,17 +9,17 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
  ?>
 
 <?php
-if(!empty($_POST["Search"]))
+if(!empty($_POST["Search"]) && !is_string($_POST["Search"])==true) 
 {
-$result=true;
-include_once 'scripts/config.php';
-include_once 'scripts/api.php';
+    $result=true;
+    include_once 'scripts/config.php';
+    include_once 'scripts/api.php';
 
-$catnaam = $_POST["Search"]; 
-$catover = CallAPI("GET", $DB."/search.php?s=".$catnaam); 
-$count = 0;
+    $catnaam = $_POST["Search"]; 
+    $catover = CallAPI("GET", $DB."/search.php?s=".$catnaam); 
+    $count = 0;
     foreach ($catover as $type) {
-    $count+= count($type);
+        $count+= count($type);
     }
 }  
 ?>

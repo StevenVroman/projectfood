@@ -348,12 +348,23 @@ body#search div.bg section#middle div#search {
   margin: 0px;
   font-family: "Montserrat", sans-serif !important;
 }
+body#home div.bg section#middle div#search div.col-auto,
+body#recipes div.bg section#middle div#search div.col-auto,
+body#recipe div.bg section#middle div#search div.col-auto,
+body#search div.bg section#middle div#search div.col-auto {
+  padding-left: 20px;
+}
 body#home div.bg section#middle div#search button,
 body#recipes div.bg section#middle div#search button,
 body#recipe div.bg section#middle div#search button,
 body#search div.bg section#middle div#search button {
   background-color: #3C153B;
   border-color: #31124b;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 300px;
+  padding-left: 5px;
 }
 body#home div.bg section#middle div#result h3,
 body#recipes div.bg section#middle div#result h3,
