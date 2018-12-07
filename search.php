@@ -1,4 +1,6 @@
 <?php
+include_once 'scripts/config.php';
+include_once 'scripts/api.php'; 
 $cookie_name = "hungry";
 $result = false;
 if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
@@ -7,24 +9,19 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
  ?>
 
 <?php
+if(!empty($_POST["Search"]))
+{
+$result=true;
+include_once 'scripts/config.php';
+include_once 'scripts/api.php';
 
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $searchresult=$_POST['search'];
-    echo $searchresult;
-    $result=true;
-    $catfound = CallAPI("GET", $DB."/search.php?s=".$searchresult); 
-    $count = 0;
-    foreach ($found as $type) {
+$catnaam = $_POST["Search"]; 
+$catover = CallAPI("GET", $DB."/search.php?s=".$catnaam); 
+$count = 0;
+    foreach ($catover as $type) {
     $count+= count($type);
-}
-} 
-
-else{
-    $result=false;
-    
-}
-
+    }
+}  
 ?>
 
 
@@ -86,11 +83,11 @@ else{
 <section id="middle" class="col-12">
     <div id="search" class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
-                            <form class="">
+                            <form class="zoek" action ="<?php $_SERVER['PHP_SELF'] ?>"  method="POST">
                                 <div class="card-body row no-gutters align-items-center">
 
                                     <div class="col">
-                                        <input class="form-control form-control-lg form-control-borderless" name="search" id="search" placeholder="search your favorite">
+                                        <input class="form-control form-control-lg form-control-borderless" name="Search" id="Search" placeholder="search your favorite">
                                     </div>
 
                                     <div class="col-auto">
@@ -103,17 +100,18 @@ else{
                     </div>
         <div id="result">
         <?php
-        if($result == true && $catfound != ""){
-            /*toon resultaten zoekopdracht */
-            for( $i =0; $i<= $count-1;$i++){  
+        if($result == true)
+        {
+             for( $i =0; $i<= $count-1;$i++){  
                 ?>
-                <a class="row" href='recipe.php?id=<?php echo $catfound['meals'][$i]['idMeal']?>'><div class='catover '>
-                <h3><?php echo $catfound['meals'][$i]['strMeal']?></h3>
+                <a class="row" href='recipe.php?id=<?php echo $catover['meals'][$i]['idMeal']?>'><div class='catover '>
+                <h3><?php echo $catover['meals'][$i]['strMeal']?></h3>
                 </div></a>
                 <?php
-                }
+                }  
         }
-        else{
+        else
+        {
             echo("<h3> No result Found</h3>");
         }
         ?>
