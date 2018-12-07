@@ -355,6 +355,14 @@ body#search div.bg section#middle div#search button {
   background-color: #3C153B;
   border-color: #31124b;
 }
+body#home div.bg section#middle div#result h3,
+body#recipes div.bg section#middle div#result h3,
+body#recipe div.bg section#middle div#result h3,
+body#search div.bg section#middle div#result h3 {
+  color: #F3EFF5 !important;
+  text-align: center;
+  padding-top: 20px;
+}
 body#home div.bg section#middle div#ingredienten,
 body#recipes div.bg section#middle div#ingredienten,
 body#recipe div.bg section#middle div#ingredienten,

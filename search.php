@@ -11,6 +11,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $searchresult=$_POST['search'];
+    echo $searchresult;
     $result=true;
     $catfound = CallAPI("GET", $DB."/search.php?s=".$searchresult); 
     $count = 0;
@@ -18,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $count+= count($type);
 }
 } 
-}
+
 else{
     $result=false;
     
@@ -33,7 +34,7 @@ else{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>home</title>
+    <title>search recipe</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -89,7 +90,7 @@ else{
                                 <div class="card-body row no-gutters align-items-center">
 
                                     <div class="col">
-                                        <input class="form-control form-control-lg form-control-borderless" type="search" name="search" id="search" placeholder="search your favorite">
+                                        <input class="form-control form-control-lg form-control-borderless" name="search" id="search" placeholder="search your favorite">
                                     </div>
 
                                     <div class="col-auto">
@@ -100,10 +101,9 @@ else{
                         </div>
 
                     </div>
-    </div>
-    <div id="result">
+        <div id="result">
         <?php
-        if($result == true){
+        if($result == true && $catfound != ""){
             /*toon resultaten zoekopdracht */
             for( $i =0; $i<= $count-1;$i++){  
                 ?>
@@ -114,11 +114,12 @@ else{
                 }
         }
         else{
-            echo("<h3> No result Found</h3>")
+            echo("<h3> No result Found</h3>");
         }
         ?>
     
      </div>
+    </div>
 </section>
 </div>
 <footer class="row">
