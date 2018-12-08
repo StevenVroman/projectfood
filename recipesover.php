@@ -61,7 +61,7 @@ foreach ($catover as $type) {
                     <a class="nav-link" href="search.php">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Latest Added</a>
+                    <a class="nav-link" href="latest.php">Latest Added</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Random Recipe</a>

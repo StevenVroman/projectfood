@@ -71,7 +71,7 @@ if(!empty($_POST["Search"]) && is_string($_POST["Search"]))
                     <a class="nav-link active" href="search.php">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Latest Added</a>
+                    <a class="nav-link" href="latest.php">Latest Added</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Random Recipe</a>

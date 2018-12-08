@@ -7,15 +7,15 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
  ?>
 
 <?php
-if(!empty($_GET["id"]))
-{
 include_once 'scripts/config.php';
 include_once 'scripts/api.php';
 
-$recipe= $_GET["id"]; 
-$recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe); 
+$catover = CallAPI("GET", $DB."/latest.php"); 
+$count = 0;
+foreach ($catover as $type) {
+    $count+= count($type);
+}
 
-} 
 
 ?>
 
@@ -35,10 +35,8 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/screen.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
 </head>
-<body id="recipe" class="container-fluid">
+<body id="latest" class="container-fluid">
 <div id="top" class="row"> 
             <div id="topbutton" class="col-11">
                 <div class="row float-right">
@@ -54,13 +52,13 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" href="home.php">Home</a>
+                    <a class="nav-link" href="home.php">Home</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="search.php">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="latest.php">Latest Added</a>
+                    <a class="nav-link active" href="latest.php">Latest Added</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="#">Random Recipe</a>
@@ -78,47 +76,15 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 </div>
 <div class="bg row">
 <section id="middle" class="col-12">
-    <div class="col-lg-4 col-md-12 col-sm-12  float-left detail-af">
-        <?php if(!$recipes['meals'][0]['strYoutube']==""){ 
-              $url = $recipes['meals'][0]['strYoutube'];
-            ?>
-        <a class="youtube" onclick='vidon("<?php echo $url ?>")'><i class="fab fa-youtube"></i></a>
-        <?php } ?>
-        <div class="row" style="background-image:url(<?php echo $recipes['meals'][0]['strMealThumb']?>)">
-        </div>
-     </div>
-    <div class="col-lg-8 col-md-12 col-sm-12 float-right info">
-        <h1><?php echo $recipes['meals'][0]['strMeal']?></h1>
-        
-        <br />
-        <span> Area : <?php echo $recipes['meals'][0]['strArea']?> </span> 
-        <br /><br />
-        <p> Instructions : <?php echo $recipes['meals'][0]['strInstructions'];?> </p>
-        <?php if(!$recipes['meals'][0]['strTags']==""){ ?>
-        <span> Tags : <?php echo $recipes['meals'][0]['strTags']?> </span>
-        <?php } ?>
-        <br />
-        
-    </div>
-    <div id="ingredienten" class="col-12">
+<?php for( $i =0; $i<= $count-1;$i++){  
+    ?>
+    <a class="row" href='recipe.php?id=<?php echo $catover['meals'][$i]['idMeal']?>'><div class='catover '>
+    <h3><?php echo $catover['meals'][$i]['strMeal']?></h3>
+    </div></a>
     <?php
-    $indexin = 1;
-    $countinged = 0;
-    while($recipes['meals'][0]['strIngredient'.$indexin.''] !=""){
-        $indexin +=1;
-        $countinged +=1;
     }
-    echo ("<ul class='row'>");
-    for($inti = 0 ; $inti<$countinged; $inti++){
-            
-            echo("<li class='col-lg-3 col-md-6 col-sm-12'>");
-            echo("<span class='col-12 text-middle '><h4>" . $recipes['meals'][0]['strIngredient'.($inti+1).''] . "</h4></span>");
-            echo("<span class='col-12 text-middle '>  ". $recipes['meals'][0]['strMeasure'.($inti+1).''] ." </span>");
-            echo("</li>");
-    }
-    echo ("</ul>");
     ?>  
-    </div>
+    
 </section>
 </div>
 <footer class="row">
@@ -128,8 +94,4 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 
 </footer>
 </body>
-<script src="scripts/youtube.js">
-$('#blogCarousel').carousel({
-				interval: 5000
-		});</script>     
 </html>

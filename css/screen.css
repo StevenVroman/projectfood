@@ -320,20 +320,23 @@ div#overlay iframe {
 body#home,
 body#recipes,
 body#recipe,
-body#search {
+body#search,
+body#latest {
   height: 100%;
 }
 body#home div.bg,
 body#recipes div.bg,
 body#recipe div.bg,
-body#search div.bg {
+body#search div.bg,
+body#latest div.bg {
   background-image: url("/pics/bgimages.jpg");
   padding: 0px;
 }
 body#home div.bg section#middle,
 body#recipes div.bg section#middle,
 body#recipe div.bg section#middle,
-body#search div.bg section#middle {
+body#search div.bg section#middle,
+body#latest div.bg section#middle {
   z-index: 300;
   min-height: 735px;
   width: 100.8%;
@@ -343,7 +346,8 @@ body#search div.bg section#middle {
 body#home div.bg section#middle div#search,
 body#recipes div.bg section#middle div#search,
 body#recipe div.bg section#middle div#search,
-body#search div.bg section#middle div#search {
+body#search div.bg section#middle div#search,
+body#latest div.bg section#middle div#search {
   width: 99% !important;
   margin: 0px;
   font-family: "Montserrat", sans-serif !important;
@@ -351,13 +355,15 @@ body#search div.bg section#middle div#search {
 body#home div.bg section#middle div#search div.col-auto,
 body#recipes div.bg section#middle div#search div.col-auto,
 body#recipe div.bg section#middle div#search div.col-auto,
-body#search div.bg section#middle div#search div.col-auto {
+body#search div.bg section#middle div#search div.col-auto,
+body#latest div.bg section#middle div#search div.col-auto {
   padding-left: 20px;
 }
 body#home div.bg section#middle div#search button,
 body#recipes div.bg section#middle div#search button,
 body#recipe div.bg section#middle div#search button,
-body#search div.bg section#middle div#search button {
+body#search div.bg section#middle div#search button,
+body#latest div.bg section#middle div#search button {
   background-color: #3C153B;
   border-color: #31124b;
   padding-left: 5px;
@@ -369,7 +375,8 @@ body#search div.bg section#middle div#search button {
 body#home div.bg section#middle div#result h3,
 body#recipes div.bg section#middle div#result h3,
 body#recipe div.bg section#middle div#result h3,
-body#search div.bg section#middle div#result h3 {
+body#search div.bg section#middle div#result h3,
+body#latest div.bg section#middle div#result h3 {
   color: #F3EFF5 !important;
   text-align: center;
   padding-top: 20px;
@@ -377,7 +384,8 @@ body#search div.bg section#middle div#result h3 {
 body#home div.bg section#middle div#ingredienten,
 body#recipes div.bg section#middle div#ingredienten,
 body#recipe div.bg section#middle div#ingredienten,
-body#search div.bg section#middle div#ingredienten {
+body#search div.bg section#middle div#ingredienten,
+body#latest div.bg section#middle div#ingredienten {
   background-color: rgba(49, 18, 75, 0.6);
   float: left;
   padding: 0px;
@@ -388,14 +396,16 @@ body#search div.bg section#middle div#ingredienten {
 body#home div.bg section#middle div#ingredienten ul,
 body#recipes div.bg section#middle div#ingredienten ul,
 body#recipe div.bg section#middle div#ingredienten ul,
-body#search div.bg section#middle div#ingredienten ul {
+body#search div.bg section#middle div#ingredienten ul,
+body#latest div.bg section#middle div#ingredienten ul {
   padding: 0px;
   margin: 0px;
 }
 body#home div.bg section#middle div#ingredienten ul li,
 body#recipes div.bg section#middle div#ingredienten ul li,
 body#recipe div.bg section#middle div#ingredienten ul li,
-body#search div.bg section#middle div#ingredienten ul li {
+body#search div.bg section#middle div#ingredienten ul li,
+body#latest div.bg section#middle div#ingredienten ul li {
   color: #F3EFF5;
   text-decoration: none;
   list-style-type: none;
@@ -407,7 +417,8 @@ body#search div.bg section#middle div#ingredienten ul li {
 body#home div.bg section#middle div#ingredienten ul li span,
 body#recipes div.bg section#middle div#ingredienten ul li span,
 body#recipe div.bg section#middle div#ingredienten ul li span,
-body#search div.bg section#middle div#ingredienten ul li span {
+body#search div.bg section#middle div#ingredienten ul li span,
+body#latest div.bg section#middle div#ingredienten ul li span {
   padding: 0px;
   margin: 0px;
   font-size: 0.8rem !important;
@@ -415,20 +426,23 @@ body#search div.bg section#middle div#ingredienten ul li span {
 body#home div.bg section#middle div#ingredienten ul li span h4,
 body#recipes div.bg section#middle div#ingredienten ul li span h4,
 body#recipe div.bg section#middle div#ingredienten ul li span h4,
-body#search div.bg section#middle div#ingredienten ul li span h4 {
+body#search div.bg section#middle div#ingredienten ul li span h4,
+body#latest div.bg section#middle div#ingredienten ul li span h4 {
   font-size: 1.4rem;
   font-weight: 900;
 }
 body#home div.bg section#middle div#ingredienten ul li:hover,
 body#recipes div.bg section#middle div#ingredienten ul li:hover,
 body#recipe div.bg section#middle div#ingredienten ul li:hover,
-body#search div.bg section#middle div#ingredienten ul li:hover {
+body#search div.bg section#middle div#ingredienten ul li:hover,
+body#latest div.bg section#middle div#ingredienten ul li:hover {
   background-color: rgba(60, 21, 59, 0.6);
 }
 body#home div.bg section#middle div.detailafbeelding,
 body#recipes div.bg section#middle div.detailafbeelding,
 body#recipe div.bg section#middle div.detailafbeelding,
-body#search div.bg section#middle div.detailafbeelding {
+body#search div.bg section#middle div.detailafbeelding,
+body#latest div.bg section#middle div.detailafbeelding {
   background-position: top;
   background-repeat: no-repeat;
   background-size: 600px;
@@ -436,13 +450,15 @@ body#search div.bg section#middle div.detailafbeelding {
 body#home div.bg section#middle div.detailafbeelding div.row,
 body#recipes div.bg section#middle div.detailafbeelding div.row,
 body#recipe div.bg section#middle div.detailafbeelding div.row,
-body#search div.bg section#middle div.detailafbeelding div.row {
+body#search div.bg section#middle div.detailafbeelding div.row,
+body#latest div.bg section#middle div.detailafbeelding div.row {
   height: 100%;
 }
 body#home div.bg section#middle a,
 body#recipes div.bg section#middle a,
 body#recipe div.bg section#middle a,
-body#search div.bg section#middle a {
+body#search div.bg section#middle a,
+body#latest div.bg section#middle a {
   height: 100%;
   box-sizing: border-box;
   text-decoration: none;
@@ -456,7 +472,8 @@ body#search div.bg section#middle a {
 body#home div.bg section#middle a div.catover,
 body#recipes div.bg section#middle a div.catover,
 body#recipe div.bg section#middle a div.catover,
-body#search div.bg section#middle a div.catover {
+body#search div.bg section#middle a div.catover,
+body#latest div.bg section#middle a div.catover {
   width: 100%;
   height: 100%;
   background-color: rgba(73, 0, 18, 0.6);
@@ -465,7 +482,8 @@ body#search div.bg section#middle a div.catover {
 body#home div.bg section#middle a div.catover h3,
 body#recipes div.bg section#middle a div.catover h3,
 body#recipe div.bg section#middle a div.catover h3,
-body#search div.bg section#middle a div.catover h3 {
+body#search div.bg section#middle a div.catover h3,
+body#latest div.bg section#middle a div.catover h3 {
   font-size: 15px;
   font-weight: 700;
   padding-top: 20px;
@@ -474,25 +492,29 @@ body#search div.bg section#middle a div.catover h3 {
 body#home div.bg section#middle a div.catover:hover,
 body#recipes div.bg section#middle a div.catover:hover,
 body#recipe div.bg section#middle a div.catover:hover,
-body#search div.bg section#middle a div.catover:hover {
+body#search div.bg section#middle a div.catover:hover,
+body#latest div.bg section#middle a div.catover:hover {
   background-color: rgba(60, 21, 59, 0.7);
 }
 body#home div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
 body#recipes div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
 body#recipe div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
-body#search div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
+body#search div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even,
+body#latest div.bg section#middle div.item.col-lg-3.col-md-6.col-sm-12.even {
   background-color: rgba(49, 18, 75, 0.6) !important;
 }
 body#home div.bg section#middle div.oneven,
 body#recipes div.bg section#middle div.oneven,
 body#recipe div.bg section#middle div.oneven,
-body#search div.bg section#middle div.oneven {
+body#search div.bg section#middle div.oneven,
+body#latest div.bg section#middle div.oneven {
   background-color: rgba(49, 18, 75, 0.8) !important;
 }
 body#home div.bg section#middle div.item,
 body#recipes div.bg section#middle div.item,
 body#recipe div.bg section#middle div.item,
-body#search div.bg section#middle div.item {
+body#search div.bg section#middle div.item,
+body#latest div.bg section#middle div.item {
   background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
@@ -505,7 +527,8 @@ body#search div.bg section#middle div.item {
 body#home div.bg section#middle div.item div,
 body#recipes div.bg section#middle div.item div,
 body#recipe div.bg section#middle div.item div,
-body#search div.bg section#middle div.item div {
+body#search div.bg section#middle div.item div,
+body#latest div.bg section#middle div.item div {
   position: absolute;
   height: 75px;
   width: 100%;
@@ -519,7 +542,8 @@ body#search div.bg section#middle div.item div {
 body#home div.bg section#middle div.item div h2,
 body#recipes div.bg section#middle div.item div h2,
 body#recipe div.bg section#middle div.item div h2,
-body#search div.bg section#middle div.item div h2 {
+body#search div.bg section#middle div.item div h2,
+body#latest div.bg section#middle div.item div h2 {
   text-align: center !important;
   font-size: 18px;
   padding-top: 20px;
@@ -532,13 +556,15 @@ body#search div.bg section#middle div.item div h2 {
 body#home div.bg section#middle div.detail-af,
 body#recipes div.bg section#middle div.detail-af,
 body#recipe div.bg section#middle div.detail-af,
-body#search div.bg section#middle div.detail-af {
+body#search div.bg section#middle div.detail-af,
+body#latest div.bg section#middle div.detail-af {
   padding: 0px !important;
 }
 body#home div.bg section#middle div.detail-af div,
 body#recipes div.bg section#middle div.detail-af div,
 body#recipe div.bg section#middle div.detail-af div,
-body#search div.bg section#middle div.detail-af div {
+body#search div.bg section#middle div.detail-af div,
+body#latest div.bg section#middle div.detail-af div {
   width: 100%;
   padding: 0px;
   min-height: 500px;
@@ -551,7 +577,8 @@ body#search div.bg section#middle div.detail-af div {
 body#home div.bg section#middle div.detail-af a.youtube,
 body#recipes div.bg section#middle div.detail-af a.youtube,
 body#recipe div.bg section#middle div.detail-af a.youtube,
-body#search div.bg section#middle div.detail-af a.youtube {
+body#search div.bg section#middle div.detail-af a.youtube,
+body#latest div.bg section#middle div.detail-af a.youtube {
   visibility: hidden;
   margin: auto;
   width: 100%;
@@ -565,7 +592,8 @@ body#search div.bg section#middle div.detail-af a.youtube {
 body#home div.bg section#middle div.detail-af a.youtube i,
 body#recipes div.bg section#middle div.detail-af a.youtube i,
 body#recipe div.bg section#middle div.detail-af a.youtube i,
-body#search div.bg section#middle div.detail-af a.youtube i {
+body#search div.bg section#middle div.detail-af a.youtube i,
+body#latest div.bg section#middle div.detail-af a.youtube i {
   position: absolute;
   top: 42.5%;
   left: 44.5%;
@@ -573,13 +601,15 @@ body#search div.bg section#middle div.detail-af a.youtube i {
 body#home div.bg section#middle div.detail-af:hover a.youtube,
 body#recipes div.bg section#middle div.detail-af:hover a.youtube,
 body#recipe div.bg section#middle div.detail-af:hover a.youtube,
-body#search div.bg section#middle div.detail-af:hover a.youtube {
+body#search div.bg section#middle div.detail-af:hover a.youtube,
+body#latest div.bg section#middle div.detail-af:hover a.youtube {
   visibility: visible;
 }
 body#home div.bg section#middle div.info,
 body#recipes div.bg section#middle div.info,
 body#recipe div.bg section#middle div.info,
-body#search div.bg section#middle div.info {
+body#search div.bg section#middle div.info,
+body#latest div.bg section#middle div.info {
   text-transform: none;
   color: #F3EFF5;
   padding: 20px;
@@ -587,13 +617,15 @@ body#search div.bg section#middle div.info {
 body#home div.bg section#middle div.info h1,
 body#recipes div.bg section#middle div.info h1,
 body#recipe div.bg section#middle div.info h1,
-body#search div.bg section#middle div.info h1 {
+body#search div.bg section#middle div.info h1,
+body#latest div.bg section#middle div.info h1 {
   font-weight: 700;
 }
 body#home div.bg section#middle div.item:hover,
 body#recipes div.bg section#middle div.item:hover,
 body#recipe div.bg section#middle div.item:hover,
-body#search div.bg section#middle div.item:hover {
+body#search div.bg section#middle div.item:hover,
+body#latest div.bg section#middle div.item:hover {
   background-size: 550px;
 }
 
