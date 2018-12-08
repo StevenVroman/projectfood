@@ -9,7 +9,7 @@ if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
  ?>
 
 <?php
-if(!empty($_POST["Search"]) && !is_string($_POST["Search"])==true) 
+if(!empty($_POST["Search"]) && is_string($_POST["Search"])) 
 {
     $result=true;
     include_once 'scripts/config.php';
@@ -18,10 +18,18 @@ if(!empty($_POST["Search"]) && !is_string($_POST["Search"])==true)
     $catnaam = $_POST["Search"]; 
     $catover = CallAPI("GET", $DB."/search.php?s=".$catnaam); 
     $count = 0;
-    foreach ($catover as $type) {
-        $count+= count($type);
-    }
-}  
+    
+        foreach($catover as $cat){
+            if(is_array($cat)){
+                $count = count($cat);
+                $result=true;
+            }
+            else{
+             $count=0;
+             $result=false;
+            }
+        }
+} 
 ?>
 
 
@@ -60,7 +68,7 @@ if(!empty($_POST["Search"]) && !is_string($_POST["Search"])==true)
                     <a class="nav-link" href="home.php">Home</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Lookup Meal</a>
+                    <a class="nav-link active" href="search.php">Lookup Meal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Latest Added</a>
@@ -102,7 +110,7 @@ if(!empty($_POST["Search"]) && !is_string($_POST["Search"])==true)
         <?php
         if($result == true)
         {
-             for( $i =0; $i<= $count-1;$i++){  
+             for( $i =0; $i < $count;$i++){  
                 ?>
                 <a class="row" href='recipe.php?id=<?php echo $catover['meals'][$i]['idMeal']?>'><div class='catover '>
                 <h3><?php echo $catover['meals'][$i]['strMeal']?></h3>
