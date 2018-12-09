@@ -65,7 +65,7 @@ for($i = 0 ; $i < $aantal; $i++){
                     <a class="nav-link active" href="random.php">Random Recipe</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Your Region</a>
+                    <a class="nav-link" href="region.php">Your Region</a>
                 </li>
             </ul>
             </div>
@@ -85,7 +85,7 @@ for($i = 0 ; $i < $aantal; $i++){
                                         <input class="form-control form-control-lg form-control-borderless" name="random" id="random" type="number" min="1" max="10">
                                     </div>
 
-                                    <div id="button" class="col-lg-2 col-md-2 col-sm-12">
+                                    <div id="button" class="col-lg-3 col-md-3 col-sm-12">
                                         <button class="btn btn-lg btn-success" type="submit">Generate</button>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ for($i = 0 ; $i < $aantal; $i++){
     </div>
 <?php
     if(empty($_POST["random"])){
-        echo("<h3> You have no clue what to cook? <br> No worries this page generate x amount of recipes from the api and helps you deciding what your making.</h3>");
+        echo("<h3> You have no clue what to cook?</h3>");
     }
     else{
         foreach( $random as $rand){  

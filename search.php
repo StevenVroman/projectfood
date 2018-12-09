@@ -77,7 +77,7 @@ if(!empty($_POST["Search"]) && is_string($_POST["Search"]))
                     <a class="nav-link" href="random.php">Random Recipe</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Your Region</a>
+                    <a class="nav-link" href="region.php">Your Region</a>
                 </li>
             </ul>
             </div>

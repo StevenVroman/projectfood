@@ -188,6 +188,7 @@ body#registerpage {
 
         a {
             padding: 0px !important;
+            margin: 0px !important;
         }
     }
 }
@@ -382,7 +383,8 @@ body#recipes,
 body#recipe,
 body#search,
 body#latest,
-body#random {
+body#random,
+body#region {
     height: 100%;
 
 

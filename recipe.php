@@ -66,7 +66,7 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
                     <a class="nav-link" href="random.php">Random Recipe</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Your Region</a>
+                    <a class="nav-link" href="region.php">Your Region</a>
                 </li>
             </ul>
             </div>
