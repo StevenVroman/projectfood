@@ -74,7 +74,7 @@ if(!empty($_POST["Search"]) && is_string($_POST["Search"]))
                     <a class="nav-link" href="latest.php">Latest Added</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Random Recipe</a>
+                    <a class="nav-link" href="random.php">Random Recipe</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Your Region</a>
@@ -94,18 +94,18 @@ if(!empty($_POST["Search"]) && is_string($_POST["Search"]))
                             <form class="zoek" action ="<?php $_SERVER['PHP_SELF'] ?>"  method="POST">
                                 <div class="card-body row no-gutters align-items-center">
 
-                                    <div class="col">
+                                    <div class="col-lg-8 col-md-9 col-sm-12">
                                         <input class="form-control form-control-lg form-control-borderless" name="Search" id="Search" placeholder="search your favorite">
                                     </div>
 
-                                    <div class="col-auto">
+                                    <div id="button" class="col-lg-4 col-md-2 col-sm-12">
                                         <button class="btn btn-lg btn-success" type="submit">Search</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
 
-                    </div>
+        </div>
         <div id="result">
         <?php
         if($result == true)
