@@ -72,32 +72,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/screen.css">
-    <title>Register</title>
+    <title>Profiel</title>
     
 </head>
-<body id="registerpage">
-<div id="register">
+<body id="profiel">
+<div id="profiel">
     <div class="container fill">
         <div class="col-12 login-form-2">
                 <div id="logopic">
                 <img src="pics/logowhite.png" alt="logo">
-                <h3 id="fout"></h3>
                 </div>
                     <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="registerform">
                         <div class="form-group">
-                        <label for="user">Choose a Username</label>
+                        <label for="user"> Username</label>
                             <input type="text" class="form-control" placeholder="Username" value="" required name="login" id="user"/>
                         </div>
                         <div class="form-group">
-                        <label for="pass">Choose a Password</label>
+                        <label for="pass">New Password</label>
                             <input type="password" class="form-control" placeholder="Password" value="" name="pass" id = "pass"required />
                         </div>
                         <div class="form-group">
-                        <label for="pass">Retype Password</label>
+                        <label for="pass">Retype new password</label>
                             <input type="password" class="form-control" placeholder="Password" value="" name="pass2" id = "pass2"required />
                         </div>
                         <div class="form-group">
-                        <label for="keuzes">Your Region</label> <br />
+                        <label for="keuzes">Region</label> <br />
                         <select id="keuzes" class="form-control" name="keuzes">
                         <?php 
                         
@@ -113,13 +112,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="container form-group">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-12">
+                             <div class="col-lg-6 col-sm-12">
                                 <input type="submit" class="btnregis form-control" value="Go back" name="Goback" onclick="history.go(-1);" />
                              </div>
                              <div class="col-lg-6 col-sm-12">
-                                <input type="submit" class="btnregis form-control" value="Register" name="Registreer" onclick="window.location.href='register.php'" />
+                                <input type="submit" class="btnregis form-control" value="Save" name="Save" onclick="window.location.href='register.php'" />
                              </div>
-                             
                         </div>
                         </div>
                     </form>

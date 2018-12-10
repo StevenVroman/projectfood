@@ -59,7 +59,8 @@ body {
 
 
 body#loginpage,
-body#registerpage {
+body#registerpage,
+body#profiel {
     background-color: $pinky;
     background-image: url("/pics/bgimages.jpg");
     background-repeat: repeat;
@@ -72,7 +73,8 @@ body#registerpage {
     }
 
     div#login,
-    div#register {
+    div#register,
+    div#profiel {
         min-width: $widthlogin -75px;
         max-width: $widthlogin;
         text-align: center;
