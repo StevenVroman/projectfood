@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $filledinpass2=$_POST['pass2'];
         $keuzevalue = $_POST['keuzes'];
         $user["username"]=$filledinlogin;
-        $user["Pass"]=$filledinpass;
+        $user["Pass"]=md5($filledinpass);
         $user["FavFood"]=$keuzevalue;
     if (isset($_POST['Registreer'])) {
         //check als 4 velden ingevuld zijn
@@ -42,10 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            if($usertekort == false && $overeenkomstpass==false && $passtekort==false){
             //ga door
             foreach($userslist as $userlist){
-                if($filledinlogin==$userlist["Username"] )
-                $bestaatal=true;
+                if($filledinlogin==$userlist["Username"]){
+                    $bestaatal=true;
+                }
                 else{
-                $bestaatal=false;
+                     $bestaatal=false;
                 }
             }
             if($bestaatal==false){

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if(isset($_POST['login']) && isset($_POST['pass']))
         {
         $filledinlogin=$_POST['login'];
-        $filledinpass=$_POST['pass'];
+        $filledinpass=md5($_POST['pass']);
         foreach($users as $user){
             if($filledinlogin==$user["Username"] && $filledinpass==$user["Pass"])
             {

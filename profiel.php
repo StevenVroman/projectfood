@@ -1,60 +1,61 @@
 <?php include_once 'scripts/config.php';?>
 <?php include_once 'scripts/api.php'; 
+$cookie_name = "hungry";
+
+if(!isset($_COOKIE[$cookie_name])) { // terug sturen als cookie niet bestaat
+    header("location: login.php");   
+}
+$account = $_COOKIE[$cookie_name];
+
 $areas = CallAPI("GET", $DB."/list.php?a=list");
-$userslist = CallAPI("GET", $DB2."/tblusers");
+$userprofile = CallAPI("GET", $DB2."/tblusers");
+
+foreach($userprofile as $profile){
+    if($account == $profile["Username"]){
+       $iduser = $profile["ID"];
+    }    
+}
+$userprofile2 = CallAPI("GET", $DB2."/tblusers/".$iduser);
 $overeenkomstpass = false;
 $usertekort = false;
 $passtekort= false;
 $bestaatal=false;
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user = array();
-        $filledinlogin=$_POST['login'];
-        $filledinpass=$_POST['pass'];
-        $filledinpass2=$_POST['pass2'];
-        $keuzevalue = $_POST['keuzes'];
-        $user["username"]=$filledinlogin;
-        $user["Pass"]=$filledinpass;
-        $user["FavFood"]=$keuzevalue;
-    if (isset($_POST['Registreer'])) {
-        //check als 4 velden ingevuld zijn
-        if(strlen($filledinlogin)<=5){
-            $usertekort=true; // fout
-        }
-        else{
-            $usertekort=false;
-        }
-        if(strlen($filledinpass)<=5){
-            $passtekort = true; //fout
-        }
-        else{
-            $passtekort = false;
-        }
-        
-        if($filledinpass == $filledinpass2){   
-            $overeenkomstpass=false;
-           }
-        else{
-            $overeenkomstpass=true; //fout
-        }
 
-        if(isset($_POST['login']) && isset($_POST['pass'])&& isset($_POST['pass2'])&& isset($_POST['keuzes']))
-        {
-           if($usertekort == false && $overeenkomstpass==false && $passtekort==false){
-            //ga door
-            foreach($userslist as $userlist){
-                if($filledinlogin==$userlist["Username"] )
-                $bestaatal=true;
-                else{
-                $bestaatal=false;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $filledinpass=$_POST['pass'];
+    $filledinpass2=$_POST['pass2'];
+    if (isset($_POST['Save'])) {
+        //check als 4 velden ingevuld zij
+        if(!$_POST['pass']== ""){
+                if(strlen($filledinpass)<=5){$passtekort = true; //fout
                 }
+                 else{ $passtekort = false;
+                }
+                if($filledinpass == $filledinpass2){   
+                     $overeenkomstpass=false;
+                }
+                else{
+                     $overeenkomstpass=true; //fout
+                }
+        }
+        if($overeenkomstpass == false && $passtekort==false){
+            //ga door
+            $user2 = array();
+            $user2["Username"]=$_POST['login'];
+            if(!$_POST['Pass']== ""){
+                $user2["Pass"]= md5($_POST['Pass']);
             }
-            if($bestaatal==false){
-                $users = CallAPI("POST", $DB2."/tblusers",json_encode($user)); // goed
-                header("location: login.php");
+            else{
+                $user2["Pass"]=$userprofile2["Pass"];
             }
+            $user2["FavFood"]=$_POST['keuzes'];
+            $result = CallAPI("PUT", $DB2."/tblusers/".$userprofile2["ID"],json_encode($user2)); // goed
+                header("location: home.php");
+
+        }
             
-            }
-        }   
+            
+            
 
     } 
     
@@ -82,18 +83,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div id="logopic">
                 <img src="pics/logowhite.png" alt="logo">
                 </div>
-                    <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="registerform">
+                    <form action ="<?php $_SERVER['PHP_SELF'] ?>" method="POST" id="profileform">
                         <div class="form-group">
                         <label for="user"> Username</label>
-                            <input type="text" class="form-control" placeholder="Username" value="" required name="login" id="user"/>
+                            <input type="text" class="form-control" placeholder="Username" value="<?php echo $userprofile2["Username"] ?>" required name="login" id="user" readonly/>
                         </div>
                         <div class="form-group">
                         <label for="pass">New Password</label>
-                            <input type="password" class="form-control" placeholder="Password" value="" name="pass" id = "pass"required />
+                            <input type="password" class="form-control" placeholder="Password" value="" name="pass" id = "pass" />
                         </div>
                         <div class="form-group">
                         <label for="pass">Retype new password</label>
-                            <input type="password" class="form-control" placeholder="Password" value="" name="pass2" id = "pass2"required />
+                            <input type="password" class="form-control" placeholder="Password" value="" name="pass2" id = "pass2" />
                         </div>
                         <div class="form-group">
                         <label for="keuzes">Region</label> <br />
@@ -101,8 +102,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <?php 
                         
                         for( $i =0; $i<=19;$i++){
-                            
-                           print("<option value=".$i.">".$areas['meals'][$i]['strArea']."</option>"); 
+                            if($i == $userprofile2["FavFood"]){
+                                print("<option value=".$i." selected>".$areas['meals'][$i]['strArea']."</option>");
+                            }
+                            else{
+                                print("<option value=".$i.">".$areas['meals'][$i]['strArea']."</option>"); 
+                            }
+                           
                             
                         }
 
@@ -112,11 +118,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="container form-group">
                         <div class="row">
-                             <div class="col-lg-6 col-sm-12">
-                                <input type="submit" class="btnregis form-control" value="Go back" name="Goback" onclick="history.go(-1);" />
-                             </div>
-                             <div class="col-lg-6 col-sm-12">
-                                <input type="submit" class="btnregis form-control" value="Save" name="Save" onclick="window.location.href='register.php'" />
+                             <div class="col-lg-12 col-sm-12">
+                                <input type="submit" class="btnregis form-control" value="Save" name="Save" />
                              </div>
                         </div>
                         </div>

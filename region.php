@@ -82,11 +82,13 @@ $arealist = CallAPI("GET", $DB."/filter.php?a=".$regionname);
 <div class="bg row">
 <section id="middle" class="col-12">
 <?php foreach( $arealist as $list){  
+    for($i = 0 ; $i<count($list); $i++){
     ?>
-    <a class="row" href='recipe.php?id=<?php echo $list[0]['idMeal']?>'><div class='catover '>
-    <h3><?php echo $list[0]['strMeal']?></h3>
+    <a class="row" href='recipe.php?id=<?php echo $list[$i]['idMeal']?>'><div class='catover '>
+    <h3><?php echo $list[$i]['strMeal']?></h3>
     </div></a>
     <?php
+    }
     }
     ?>  
     
