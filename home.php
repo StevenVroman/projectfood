@@ -109,4 +109,5 @@ foreach ($categories as $type) {
 
 </footer>
 </body>
+<script src="scripts/preloader.js"> </script>
 </html>

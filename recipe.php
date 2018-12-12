@@ -135,5 +135,6 @@ $recipes = CallAPI("GET", $DB."/lookup.php?i=".$recipe);
 <script src="scripts/youtube.js">
 $('#blogCarousel').carousel({
 				interval: 5000
-		});</script>     
+        });</script>  
+<script src="scripts/preloader.js"> </script>   
 </html>

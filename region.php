@@ -97,7 +97,6 @@ $arealist = CallAPI("GET", $DB."/filter.php?a=".$regionname);
 <footer class="row">
     <span>Api used : &nbsp 
     <a href="https://www.themealdb.com/api.php"> The MealDB</a> </span>
-    
 
 </footer>
 </body>

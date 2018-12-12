@@ -81,7 +81,7 @@ for($i = 0 ; $i < $aantal; $i++){
                             <form class="zoek" action ="<?php $_SERVER['PHP_SELF'] ?>"  method="POST">
                                 <div class="card-body row no-gutters align-items-center">
 
-                                    <div class="col-lg-8 col-md-9 col-sm-12">
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
                                         <input class="form-control form-control-lg form-control-borderless" name="random" id="random" type="number" min="1" max="10">
                                     </div>
 

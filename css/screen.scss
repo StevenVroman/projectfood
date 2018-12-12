@@ -10,6 +10,28 @@ $widthlogin : 450px;
 $hoogtehome: 50px;
 $paddingtop: 20px;
 
+
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $anderlecht;
+    z-index: 6000;
+    opacity: 0.8;
+
+    img {
+        display: block;
+        margin-left: auto;
+        padding-top: 20%;
+        margin-right: auto;
+    }
+}
+
+
 body#error {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
