@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 05, 2018 at 03:35 PM
+-- Generation Time: Dec 12, 2018 at 08:10 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -40,7 +40,9 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`ID`, `Username`, `Pass`, `FavFood`) VALUES
-(1, 'testuser', 'test123', 5);
+(31, 'testuser123', 'cc03e747a6afbbcbf8be7668acfebee5', 4),
+(32, 'testuser', 'cc03e747a6afbbcbf8be7668acfebee5', 10),
+(33, 'egestas', '12c899fa93dea6d413b4b4242271cac0', 0);
 
 --
 -- Indexes for dumped tables
@@ -60,7 +62,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
