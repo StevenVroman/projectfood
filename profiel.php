@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 </head>
 <body id="profiel">
-<div id="profiel">
+<div id="profiel2">
     <div class="container fill">
         <div class="col-12 login-form-2">
                 <div id="logopic">
