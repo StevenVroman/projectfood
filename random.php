@@ -112,8 +112,6 @@ for($i = 0 ; $i < $aantal; $i++){
 <footer class="row">
     <span>Api used : &nbsp 
     <a href="https://www.themealdb.com/api.php"> The MealDB</a> </span>
-    
-
 </footer>
 </body>
 </html>
